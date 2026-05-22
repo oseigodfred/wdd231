@@ -1,0 +1,131 @@
+/* ========================================
+   ACCRA CHAMBER OF COMMERCE — larger.css
+   Tablet (600px) → Desktop (900px+)
+   ======================================== */
+
+/* ===== TABLET: 600px ===== */
+@media (min-width: 600px) {
+
+  /* Header */
+  header { padding: 0.75rem 1.5rem; }
+
+  /* Nav becomes horizontal */
+  #main-nav {
+    display: flex !important;
+    flex-direction: row;
+    border-top: none;
+    padding: 0;
+    background: transparent;
+    gap: 0;
+  }
+
+  #menu-toggle { display: none; }
+
+  #main-nav a {
+    padding: 0.5rem 0.9rem;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    border-radius: var(--radius) var(--radius) 0 0;
+    font-size: 0.85rem;
+  }
+
+  #main-nav a:hover,
+  #main-nav a[aria-current="page"] {
+    background: rgba(255,255,255,0.12);
+    border-bottom-color: var(--clr-secondary);
+  }
+
+  /* Page hero */
+  .page-hero { padding: 3rem 2rem; }
+  .page-hero h1 { font-size: 2.5rem; }
+  .page-hero p { font-size: 1.05rem; }
+
+  /* Main */
+  main { padding: 2rem 1.5rem; }
+
+  /* Controls */
+  .directory-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Grid: 2 columns */
+  #members-container.grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* List card nicely laid out */
+  .list-view .card-body {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  /* Footer */
+  footer { padding: 2.5rem 1.5rem 1.5rem; }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .footer-bottom { text-align: left; }
+}
+
+
+/* ===== DESKTOP: 900px ===== */
+@media (min-width: 900px) {
+
+  /* Header */
+  header { padding: 0 2rem; }
+
+  .header-inner { height: 70px; }
+
+  .site-title strong { font-size: 1.15rem; }
+  .site-title span   { font-size: 0.72rem; }
+
+  #main-nav a { padding: 0.55rem 1rem; font-size: 0.9rem; }
+
+  /* Page hero */
+  .page-hero { padding: 4rem 2rem; }
+  .page-hero h1 { font-size: 3rem; }
+
+  /* Main */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+  }
+
+  /* Grid: 3 columns */
+  #members-container.grid-view {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .card-img-wrap { height: 140px; }
+
+  .card-name { font-size: 1.1rem; }
+
+  /* List view: full-width nicely spaced */
+  .list-view .member-card { padding: 1rem 1.5rem; }
+
+  .list-view .card-img-wrap { width: 60px; height: 60px; font-size: 2rem; }
+
+  /* Footer */
+  footer { padding: 3rem 2rem 1.5rem; }
+
+  .footer-grid { max-width: 1200px; margin: 0 auto; }
+}
+
+
+/* ===== WIDE: 1200px ===== */
+@media (min-width: 1200px) {
+
+  #members-container.grid-view {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

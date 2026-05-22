@@ -1,0 +1,92 @@
+{
+  "members": [
+    {
+      "name": "Kente Craft Exports Ltd",
+      "tagline": "Authentic Ghanaian Textiles to the World",
+      "address": "45 Liberation Road, Accra",
+      "phone": "+233-30-277-4501",
+      "website": "https://kentecraftexports.com",
+      "image": "kente-craft.webp",
+      "membership": 3,
+      "email": "info@kentecraftexports.com",
+      "founded": 1998
+    },
+    {
+      "name": "Osu Tech Hub",
+      "tagline": "Powering Accra's Digital Innovation",
+      "address": "12 Oxford Street, Osu, Accra",
+      "phone": "+233-30-291-8823",
+      "website": "https://osutechhub.com",
+      "image": "osu-tech.webp",
+      "membership": 3,
+      "email": "hello@osutechhub.com",
+      "founded": 2015
+    },
+    {
+      "name": "Gold Coast Finance Group",
+      "tagline": "Smart Investments for a Prosperous Future",
+      "address": "7 Ambassadorial Enclave, Ridge, Accra",
+      "phone": "+233-30-268-0044",
+      "website": "https://goldcoastfinance.com",
+      "image": "gold-coast-finance.webp",
+      "membership": 3,
+      "email": "contact@goldcoastfinance.com",
+      "founded": 2005
+    },
+    {
+      "name": "Abrantie Catering & Events",
+      "tagline": "Memorable Events with Authentic Flavours",
+      "address": "88 Spintex Road, Accra",
+      "phone": "+233-30-282-3311",
+      "website": "https://abrrantieevents.com",
+      "image": "abrantie-catering.webp",
+      "membership": 2,
+      "email": "bookings@abrantieevents.com",
+      "founded": 2010
+    },
+    {
+      "name": "Tema Port Logistics",
+      "tagline": "Seamless Freight & Supply Chain Solutions",
+      "address": "Port Access Road, Tema",
+      "phone": "+233-30-320-5560",
+      "website": "https://temaportlogistics.com",
+      "image": "tema-logistics.webp",
+      "membership": 2,
+      "email": "ops@temaportlogistics.com",
+      "founded": 2001
+    },
+    {
+      "name": "Accra Green Energy Co.",
+      "tagline": "Sustainable Power for Every Household",
+      "address": "23 Atomic Road, Haatso, Accra",
+      "phone": "+233-30-250-7720",
+      "website": "https://accragreenergy.com",
+      "image": "accra-green.webp",
+      "membership": 2,
+      "email": "solar@accragreenergy.com",
+      "founded": 2018
+    },
+    {
+      "name": "Legon Bookshop & Stationery",
+      "tagline": "Knowledge Tools for Every Student",
+      "address": "University of Ghana Campus, Legon",
+      "phone": "+233-30-250-0189",
+      "website": "https://legonbookshop.com",
+      "image": "legon-bookshop.webp",
+      "membership": 1,
+      "email": "store@legonbookshop.com",
+      "founded": 1991
+    },
+    {
+      "name": "Mama's Kitchen Restaurant",
+      "tagline": "Home Cooking, Big Portions, No Pretense",
+      "address": "31 Nkrumah Avenue, Adabraka, Accra",
+      "phone": "+233-30-224-4416",
+      "website": "https://mamaskitchengh.com",
+      "image": "mamas-kitchen.webp",
+      "membership": 1,
+      "email": "eat@mamaskitchengh.com",
+      "founded": 2008
+    }
+  ]
+}
