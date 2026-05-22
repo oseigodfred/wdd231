@@ -104,50 +104,71 @@
     </section>
 
     <!-- ===== MAIN CONTENT ===== -->
-    <main id="main-content">
+   <main id="main-content">
 
-        <!-- Controls: heading + view toggle -->
-        <div class="directory-controls">
-            <h2>Chamber Members</h2>
-            <div class="view-toggle" role="group" aria-label="Directory view options">
-                <!-- Grid button -->
-                <button id="btn-grid" class="active" aria-pressed="true" title="Grid view">
-                    <!-- Grid icon -->
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        aria-hidden="true">
-                        <rect x="3" y="3" width="7" height="7" rx="1" />
-                        <rect x="14" y="3" width="7" height="7" rx="1" />
-                        <rect x="3" y="14" width="7" height="7" rx="1" />
-                        <rect x="14" y="14" width="7" height="7" rx="1" />
-                    </svg>
-                    Grid
-                </button>
+    <!-- Page Hero -->
+    <section class="page-hero" aria-label="Page introduction">
+        <h1>Business Directory</h1>
+        <p>Connecting Accra's business community — Gold, Silver & Member enterprises</p>
+    </section>
 
-                <!-- List button -->
-                <button id="btn-list" aria-pressed="false" title="List view">
-                    <!-- List icon -->
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        aria-hidden="true">
-                        <line x1="8" y1="6" x2="21" y2="6" />
-                        <line x1="8" y1="12" x2="21" y2="12" />
-                        <line x1="8" y1="18" x2="21" y2="18" />
-                        <circle cx="3" cy="6" r="1.5" fill="currentColor" />
-                        <circle cx="3" cy="12" r="1.5" fill="currentColor" />
-                        <circle cx="3" cy="18" r="1.5" fill="currentColor" />
-                    </svg>
-                    List
-                </button>
-            </div>
+    <!-- Controls: heading + view toggle -->
+    <div class="directory-controls">
+        <h2>Chamber Members</h2>
+
+        <div class="view-toggle" role="group" aria-label="Directory view options">
+
+            <!-- Grid button -->
+            <button id="btn-grid" class="active" aria-pressed="true" title="Grid view">
+
+                <!-- Grid icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" aria-hidden="true">
+
+                    <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                    <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                    <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                    <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+
+                </svg>
+
+                Grid
+            </button>
+
+            <!-- List button -->
+            <button id="btn-list" aria-pressed="false" title="List view">
+
+                <!-- List icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" aria-hidden="true">
+
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+
+                    <circle cx="3" cy="6" r="1.5" fill="currentColor"></circle>
+                    <circle cx="3" cy="12" r="1.5" fill="currentColor"></circle>
+                    <circle cx="3" cy="18" r="1.5" fill="currentColor"></circle>
+
+                </svg>
+
+                List
+            </button>
+
         </div>
+    </div>
 
-        <!-- Members container — populated by JS -->
-        <div id="members-container" class="grid-view" role="list" aria-label="Chamber member businesses"
-            aria-live="polite">
-            <!-- JS renders cards here -->
-        </div>
+    <!-- Members container -->
+    <div id="members-container" class="grid-view"
+        role="list"
+        aria-label="Chamber member businesses"
+        aria-live="polite">
 
-    </main>
+        <!-- JS renders cards here -->
 
+    </div>
+
+</main>
     <!-- ===== FOOTER ===== -->
     <footer role="contentinfo">
         <div class="footer-grid">
