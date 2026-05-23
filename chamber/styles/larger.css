@@ -55,7 +55,25 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* List card nicely laid out */
+  /* Home hero */
+  .home-hero { min-height: 420px; }
+  .hero-content { padding: 3rem 2rem; }
+  .hero-content h1 { font-size: 2.6rem; }
+
+  /* Home main */
+  .home-main { padding: 2rem 1.5rem; gap: 3rem; }
+
+  /* Events grid: 2 columns on tablet */
+  .events-grid { grid-template-columns: repeat(2, 1fr); display: grid; }
+
+  /* Spotlights: 2 cols */
+  .spotlights-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* CTA */
+  .cta-banner { padding: 2.5rem 2rem; }
+  .cta-banner h2 { font-size: 1.8rem; }
+
+
   .list-view .card-body {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -100,8 +118,35 @@
     padding: 2.5rem 2rem;
   }
 
-  /* Grid: 3 columns */
-  #members-container.grid-view {
+  /* Home hero */
+  .home-hero { min-height: 500px; }
+  .hero-content h1 { font-size: 3.2rem; }
+  .hero-content p  { font-size: 1.05rem; }
+
+  /* Home main */
+  .home-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    /* Two-column layout: events+weather | spotlights */
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    grid-template-rows: auto auto auto;
+    gap: 2rem 2.5rem;
+  }
+
+  .events-section   { grid-column: 1; grid-row: 1; }
+  .weather-section  { grid-column: 1; grid-row: 2; }
+  .spotlights-section { grid-column: 2; grid-row: 1 / span 2; }
+  .cta-section      { grid-column: 1 / -1; grid-row: 3; }
+
+  /* Spotlights: single column in the sidebar */
+  .spotlights-grid { grid-template-columns: 1fr; }
+
+  /* Events: 2-col within the column */
+  .events-grid { grid-template-columns: repeat(2, 1fr); }
+
+
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }

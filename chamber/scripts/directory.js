@@ -173,6 +173,149 @@ function escHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
+'use strict';
+
+/* ==============================
+   WEATHER
+   ============================== */
+
+const apiKey = 'YOUR_API_KEY';
+const weatherUrl =
+  `https://api.openweathermap.org/data/2.5/forecast?q=Accra,GH&units=metric&appid=${apiKey}`;
+
+async function loadWeather() {
+  try {
+    const response = await fetch(weatherUrl);
+
+    if (!response.ok) {
+      throw new Error('Weather data failed');
+    }
+
+    const data = await response.json();
+
+    displayWeather(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function displayWeather(data) {
+  const currentTemp = document.getElementById('current-temp');
+  const weatherDesc = document.getElementById('weather-desc');
+  const forecastList = document.getElementById('forecast-list');
+
+  currentTemp.textContent =
+    `${Math.round(data.list[0].main.temp)}°C`;
+
+  weatherDesc.textContent =
+    data.list[0].weather[0].description;
+
+  forecastList.innerHTML = '';
+
+  const forecastIndexes = [8, 16, 24];
+
+  forecastIndexes.forEach(index => {
+    const item = data.list[index];
+
+    const date = new Date(item.dt_txt);
+
+    const li = document.createElement('li');
+
+    li.innerHTML = `
+      <strong>
+        ${date.toLocaleDateString('en-GH', { weekday: 'long' })}
+      </strong>:
+      ${Math.round(item.main.temp)}°C
+    `;
+
+    forecastList.appendChild(li);
+  });
+}
+
+/* ==============================
+   MEMBER SPOTLIGHTS
+   ============================== */
+
+const spotlightContainer =
+  document.getElementById('spotlights-container');
+
+async function loadSpotlights() {
+  try {
+    const response =
+      await fetch('data/members.json');
+
+    if (!response.ok) {
+      throw new Error('Members data failed');
+    }
+
+    const data = await response.json();
+
+    displaySpotlights(data.members);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function displaySpotlights(members) {
+
+  const qualifiedMembers = members.filter(member =>
+    member.membership === 2 ||
+    member.membership === 3
+  );
+
+  const shuffled = qualifiedMembers.sort(() => 0.5 - Math.random());
+
+  const selected =
+    shuffled.slice(0, Math.floor(Math.random() * 2) + 2);
+
+  spotlightContainer.innerHTML = '';
+
+  selected.forEach(member => {
+
+    const level =
+      member.membership === 3 ? 'Gold' : 'Silver';
+
+    const card = document.createElement('article');
+
+    card.classList.add('spotlight-card');
+
+    card.innerHTML = `
+      <img
+        src="${member.image}"
+        alt="${member.name} logo"
+        loading="lazy"
+      >
+
+      <h3>${member.name}</h3>
+
+      <p>${member.address}</p>
+
+      <p>${member.phone}</p>
+
+      <p>
+        <a href="${member.website}" target="_blank" rel="noopener noreferrer">
+          Visit Website
+        </a>
+      </p>
+
+      <p><strong>${level} Member</strong></p>
+    `;
+
+    spotlightContainer.appendChild(card);
+  });
+}
+
+/* ==============================
+   INIT
+   ============================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  loadWeather();
+
+  loadSpotlights();
+});
+
 /* ==============================
    INIT
    ============================== */
