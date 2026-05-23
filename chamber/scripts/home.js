@@ -1,284 +1,433 @@
 /**
  * Accra Chamber of Commerce — home.js
- * - OpenWeatherMap weather + 3-day forecast
- * - Random Gold/Silver member spotlights
- * - Mobile nav
- * - Footer dates
+ * Fixed weather API logic, improved fetch handling,
+ * cleaner path resolution, and safer rendering.
  */
 
 'use strict';
 
-/* =============================================
-   CONFIG
-   ============================================= */
-// Accra, Ghana coordinates
-const LAT  = 5.6037;
-const LON  = -0.1870;
-const CITY = 'Accra';
-// ⚠️  Replace with your own free key from openweathermap.org
+/* ── CONFIG ── */
+const LAT = 5.6037;
+const LON = -0.1870;
+
+/* Replace with your real OpenWeatherMap key */
 const OWM_KEY = '7410541168338b7e6442fb916d1df184';
 
-const MEMBERS_URL = 'data/members.json';
+/* Resolve members.json path safely */
+const SCRIPT_DIR = (() => {
+  const currentScript = document.currentScript;
 
+  if (currentScript?.src) {
+    return currentScript.src.replace(/js\/home\.js.*$/, '');
+  }
+
+  return './';
+})();
+
+const MEMBERS_URL = `${SCRIPT_DIR}data/members.json`;
+
+/* ── WEATHER ICONS ── */
 const WEATHER_ICONS = {
-  '01d': '☀️', '01n': '🌙',
-  '02d': '⛅', '02n': '⛅',
-  '03d': '☁️', '03n': '☁️',
-  '04d': '☁️', '04n': '☁️',
-  '09d': '🌧️', '09n': '🌧️',
-  '10d': '🌦️', '10n': '🌧️',
-  '11d': '⛈️', '11n': '⛈️',
-  '13d': '❄️', '13n': '❄️',
-  '50d': '🌫️', '50n': '🌫️',
+  '01d': '☀️',
+  '01n': '🌙',
+  '02d': '⛅',
+  '02n': '⛅',
+  '03d': '☁️',
+  '03n': '☁️',
+  '04d': '☁️',
+  '04n': '☁️',
+  '09d': '🌧️',
+  '09n': '🌧️',
+  '10d': '🌦️',
+  '10n': '🌧️',
+  '11d': '⛈️',
+  '11n': '⛈️',
+  '13d': '❄️',
+  '13n': '❄️',
+  '50d': '🌫️',
+  '50n': '🌫️',
 };
 
+/* ── BUSINESS ICONS ── */
 const BIZ_ICONS = ['🏺', '💻', '💰', '🍽️', '🚢', '☀️', '📚', '👩‍🍳'];
 
-const MEMBERSHIP_LABELS = {
-  3: { label: 'Gold',   cls: 'badge-gold'   },
+/* ── MEMBERSHIP ── */
+const MEMBERSHIP = {
+  3: { label: 'Gold', cls: 'badge-gold' },
   2: { label: 'Silver', cls: 'badge-silver' },
   1: { label: 'Member', cls: 'badge-member' },
 };
 
-/* =============================================
+/* ─────────────────────────────
    WEATHER
-   ============================================= */
+───────────────────────────── */
 async function loadWeather() {
-  const currentEl  = document.getElementById('weather-current');
-  const forecastEl = document.getElementById('weather-forecast');
-  if (!currentEl) return;
+  const curEl = document.getElementById('weather-current');
+  const foreEl = document.getElementById('weather-forecast');
 
-  // Show loading
-  currentEl.innerHTML = `<div class="weather-loading">Loading weather…</div>`;
+  if (!curEl) return;
 
-  // If no real key, use demo data
-  if (!OWM_KEY || OWM_KEY === 'PASTE_YOUR_OWM_API_KEY_HERE') {
-    renderDemoWeather(currentEl, forecastEl);
+  curEl.innerHTML = `
+    <div class="weather-loading">
+      Loading weather...
+    </div>
+  `;
+
+  /* Demo fallback */
+  if (!OWM_KEY || OWM_KEY === 'YOUR_API_KEY_HERE') {
+    renderDemoWeather(curEl, foreEl);
     return;
   }
 
   try {
-    // Current weather
-    const [curRes, foreRes] = await Promise.all([
-      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=metric&appid=${OWM_KEY}`),
-      fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&cnt=24&appid=${OWM_KEY}`)
-    ]);
+    const currentURL =
+      `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=metric&appid=${OWM_KEY}`;
 
-    if (!curRes.ok) throw new Error(`Weather API error ${curRes.status}`);
+    const forecastURL =
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&cnt=24&appid=${OWM_KEY}`;
 
-    const cur  = await curRes.json();
-    const fore = await foreRes.json();
+    const currentResponse = await fetch(currentURL);
+    const forecastResponse = await fetch(forecastURL);
 
-    renderCurrentWeather(currentEl, cur);
-    renderForecast(forecastEl, fore);
+    if (!currentResponse.ok || !forecastResponse.ok) {
+      throw new Error('Weather API request failed');
+    }
 
-  } catch (err) {
-    console.error('Weather load failed:', err);
-    currentEl.innerHTML = `<div class="weather-error">⚠️ Weather data unavailable.</div>`;
-    renderDemoWeather(null, forecastEl);
+    const currentData = await currentResponse.json();
+    const forecastData = await forecastResponse.json();
+
+    renderCurrentWeather(curEl, currentData);
+    renderForecast(foreEl, forecastData);
+
+  } catch (error) {
+    console.error('Weather API error:', error);
+    renderDemoWeather(curEl, foreEl);
   }
 }
 
 function renderCurrentWeather(el, data) {
-  const temp     = Math.round(data.main.temp);
-  const feelsLike= Math.round(data.main.feels_like);
+  const temp = Math.round(data.main.temp);
+  const feels = Math.round(data.main.feels_like);
   const humidity = data.main.humidity;
-  const desc     = data.weather[0].description;
-  const icon     = WEATHER_ICONS[data.weather[0].icon] || '🌡️';
-  const wind     = Math.round(data.wind.speed * 3.6); // m/s → km/h
+  const wind = Math.round(data.wind.speed * 3.6);
+
+  const icon =
+    WEATHER_ICONS[data.weather[0].icon] || '🌡️';
+
+  const desc = data.weather[0].description;
 
   el.innerHTML = `
     <div class="weather-icon-wrap">${icon}</div>
+
     <div>
       <div class="weather-now-temp">${temp}°C</div>
-      <div class="weather-now-desc">${desc}</div>
+
+      <div class="weather-now-desc">
+        ${esc(desc)}
+      </div>
+
       <div class="weather-now-meta">
-        <span>Feels like ${feelsLike}°C</span>
+        <span>Feels like ${feels}°C</span>
         <span>💧 ${humidity}%</span>
         <span>💨 ${wind} km/h</span>
       </div>
-    </div>`;
+    </div>
+  `;
 }
 
 function renderForecast(el, data) {
-  if (!el) return;
-  // Pick one reading per future day (noon)
-  const days = {};
+  if (!el || !data.list) return;
+
+  const today = new Date().toDateString();
+  const forecastDays = {};
+
   for (const item of data.list) {
-    const date = new Date(item.dt * 1000);
-    const key  = date.toDateString();
-    const today= new Date().toDateString();
-    if (key === today) continue;
-    if (!days[key] && Object.keys(days).length < 3) {
-      days[key] = item;
+    const dateKey =
+      new Date(item.dt * 1000).toDateString();
+
+    if (dateKey === today) continue;
+
+    if (
+      !forecastDays[dateKey] &&
+      Object.keys(forecastDays).length < 3
+    ) {
+      forecastDays[dateKey] = item;
     }
   }
 
-  const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-  el.innerHTML = Object.values(days).map(item => {
-    const d    = new Date(item.dt * 1000);
-    const hi   = Math.round(item.main.temp_max);
-    const lo   = Math.round(item.main.temp_min);
-    const icon = WEATHER_ICONS[item.weather[0].icon] || '🌡️';
-    return `
-      <div class="forecast-day">
-        <span class="f-label">${dayNames[d.getDay()]}</span>
-        <span class="f-icon">${icon}</span>
-        <span class="f-temp">${hi}°</span>
-        <span class="f-lo">${lo}°</span>
-      </div>`;
-  }).join('');
-}
+  el.innerHTML = Object.values(forecastDays)
+    .map(item => {
+      const date = new Date(item.dt * 1000);
 
-function renderDemoWeather(curEl, foreEl) {
-  // Realistic Accra demo data
-  if (curEl) {
-    curEl.innerHTML = `
-      <div class="weather-icon-wrap">⛅</div>
-      <div>
-        <div class="weather-now-temp">31°C</div>
-        <div class="weather-now-desc">Partly cloudy</div>
-        <div class="weather-now-meta">
-          <span>Feels like 35°C</span>
-          <span>💧 78%</span>
-          <span>💨 18 km/h</span>
+      const icon =
+        WEATHER_ICONS[item.weather[0].icon] || '🌡️';
+
+      return `
+        <div class="forecast-day">
+          <span class="f-label">
+            ${DAYS[date.getDay()]}
+          </span>
+
+          <span class="f-icon">${icon}</span>
+
+          <span class="f-temp">
+            ${Math.round(item.main.temp_max)}°
+          </span>
+
+          <span class="f-lo">
+            ${Math.round(item.main.temp_min)}°
+          </span>
         </div>
-      </div>`;
-  }
-  if (foreEl) {
-    const days = [
-      { label: 'Tomorrow', icon: '🌦️', hi: 30, lo: 24 },
-      { label: 'Wed',      icon: '⛅',  hi: 32, lo: 25 },
-      { label: 'Thu',      icon: '☀️',  hi: 34, lo: 26 },
-    ];
-    foreEl.innerHTML = days.map(d => `
-      <div class="forecast-day">
-        <span class="f-label">${d.label}</span>
-        <span class="f-icon">${d.icon}</span>
-        <span class="f-temp">${d.hi}°</span>
-        <span class="f-lo">${d.lo}°</span>
-      </div>`).join('');
-  }
+      `;
+    })
+    .join('');
 }
 
-/* =============================================
+/* ─────────────────────────────
+   DEMO WEATHER
+───────────────────────────── */
+function renderDemoWeather(curEl, foreEl) {
+  curEl.innerHTML = `
+    <div class="weather-icon-wrap">⛅</div>
+
+    <div>
+      <div class="weather-now-temp">31°C</div>
+
+      <div class="weather-now-desc">
+        Partly cloudy
+      </div>
+
+      <div class="weather-now-meta">
+        <span>Feels like 35°C</span>
+        <span>💧 78%</span>
+        <span>💨 18 km/h</span>
+      </div>
+    </div>
+  `;
+
+  if (!foreEl) return;
+
+  const today = new Date();
+
+  const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+  const demoForecast = [
+    { icon: '🌦️', hi: 30, lo: 24 },
+    { icon: '⛅', hi: 32, lo: 25 },
+    { icon: '☀️', hi: 34, lo: 26 },
+  ];
+
+  foreEl.innerHTML = demoForecast
+    .map((item, index) => {
+      const date = new Date(today);
+
+      date.setDate(today.getDate() + index + 1);
+
+      return `
+        <div class="forecast-day">
+          <span class="f-label">
+            ${DAYS[date.getDay()]}
+          </span>
+
+          <span class="f-icon">${item.icon}</span>
+
+          <span class="f-temp">${item.hi}°</span>
+
+          <span class="f-lo">${item.lo}°</span>
+        </div>
+      `;
+    })
+    .join('');
+}
+
+/* ─────────────────────────────
    SPOTLIGHTS
-   ============================================= */
+───────────────────────────── */
 async function loadSpotlights() {
-  const container = document.getElementById('spotlights-container');
+  const container =
+    document.getElementById('spotlights-container');
+
   if (!container) return;
 
   try {
-    const res = await fetch(MEMBERS_URL);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const { members } = await res.json();
+    const response = await fetch(MEMBERS_URL);
 
-    // Filter Gold (3) and Silver (2)
-    const eligible = members.filter(m => m.membership >= 2);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
 
-    // Shuffle and pick 2-3
-    const shuffled = eligible.sort(() => Math.random() - 0.5);
-    const picks    = shuffled.slice(0, 3);
+    const data = await response.json();
 
-    container.innerHTML = picks.map((m, i) => buildSpotlight(m, i)).join('');
+    const eligible = data.members.filter(
+      member => member.membership >= 2
+    );
 
-  } catch (err) {
-    console.error('Spotlights error:', err);
-    document.getElementById('spotlights-container').innerHTML =
-      `<p class="weather-error">Spotlights unavailable.</p>`;
+    if (!eligible.length) {
+      throw new Error('No spotlight members found');
+    }
+
+    eligible.sort(() => Math.random() - 0.5);
+
+    const selected = eligible.slice(0, 3);
+
+    container.innerHTML = selected
+      .map((member, index) =>
+        buildSpotlight(member, index)
+      )
+      .join('');
+
+  } catch (error) {
+    console.error('Spotlight error:', error);
+
+    container.innerHTML = `
+      <p class="weather-error">
+        ⚠️ Member spotlights unavailable.
+      </p>
+    `;
   }
 }
 
-function buildSpotlight(m, i) {
-  const mem     = MEMBERSHIP_LABELS[m.membership] || MEMBERSHIP_LABELS[1];
-  const icon    = BIZ_ICONS[i % BIZ_ICONS.length];
-  const isSilver= m.membership === 2;
-  const host    = (() => { try { return new URL(m.website).hostname; } catch { return m.website; }})();
+function buildSpotlight(member, index) {
+  const membership =
+    MEMBERSHIP[member.membership] || MEMBERSHIP[1];
+
+  const icon =
+    BIZ_ICONS[index % BIZ_ICONS.length];
+
+  let hostname = member.website;
+
+  try {
+    hostname = new URL(member.website).hostname;
+  } catch {
+    hostname = member.website;
+  }
 
   return `
-    <article class="spotlight-card${isSilver ? ' silver-card' : ''}">
+    <article class="spotlight-card">
       <div class="spotlight-header">
-        <div class="spotlight-logo" aria-hidden="true">${icon}</div>
+        <div class="spotlight-logo">
+          ${icon}
+        </div>
+
         <div>
-          <h3 class="spotlight-name">${escHtml(m.name)}</h3>
-          <span class="membership-badge ${mem.cls}">${mem.label} Member</span>
+          <h3 class="spotlight-name">
+            ${esc(member.name)}
+          </h3>
+
+          <span class="membership-badge ${membership.cls}">
+            ${membership.label} Member
+          </span>
         </div>
       </div>
+
       <div class="spotlight-info">
+
         <div class="spotlight-row">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21L8.5 10.5s1 3 5 5l.613-1.723a1 1 0 011.21-.502l4.493 1.498A1 1 0 0121 15.72V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-          </svg>
-          <a href="tel:${escHtml(m.phone)}">${escHtml(m.phone)}</a>
+          <a href="tel:${esc(member.phone)}">
+            ${esc(member.phone)}
+          </a>
         </div>
+
         <div class="spotlight-row">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-            <circle cx="12" cy="11" r="3"/>
-          </svg>
-          <span>${escHtml(m.address)}</span>
+          ${esc(member.address)}
         </div>
+
         <div class="spotlight-row">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
-          </svg>
-          <a href="${escHtml(m.website)}" target="_blank" rel="noopener noreferrer">${escHtml(host)}</a>
+          <a
+            href="${esc(member.website)}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit ${esc(member.name)} website"
+          >
+            ${esc(hostname)}
+          </a>
         </div>
+
       </div>
-      <div class="spotlight-footer">
-        <span class="spotlight-label">Featured Member</span>
-      </div>
-    </article>`;
+    </article>
+  `;
 }
 
-/* =============================================
+/* ─────────────────────────────
    MOBILE NAV
-   ============================================= */
+───────────────────────────── */
 function initNav() {
-  const toggle = document.getElementById('menu-toggle');
-  const nav    = document.getElementById('main-nav');
+  const toggle =
+    document.getElementById('menu-toggle');
+
+  const nav =
+    document.getElementById('main-nav');
+
   if (!toggle || !nav) return;
 
   toggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
+
+    toggle.setAttribute(
+      'aria-expanded',
+      String(isOpen)
+    );
   });
 
   nav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+
+      toggle.setAttribute(
+        'aria-expanded',
+        'false'
+      );
     });
   });
 }
 
-/* =============================================
-   FOOTER DATES
-   ============================================= */
+/* ─────────────────────────────
+   FOOTER
+───────────────────────────── */
 function setFooterDates() {
-  const yearEl = document.getElementById('copyright-year');
-  const modEl  = document.getElementById('last-modified');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  const yearEl =
+    document.getElementById('copyright-year');
+
+  const modEl =
+    document.getElementById('last-modified');
+
+  if (yearEl) {
+    yearEl.textContent =
+      new Date().getFullYear();
+  }
+
   if (modEl) {
-    const d = new Date(document.lastModified);
-    modEl.textContent = d.toLocaleDateString('en-GH', {
-      year: 'numeric', month: 'long', day: 'numeric',
-      hour: '2-digit', minute: '2-digit'
-    });
+    const modifiedDate =
+      new Date(document.lastModified);
+
+    modEl.textContent =
+      modifiedDate.toLocaleDateString(
+        'en-GH',
+        {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        }
+      );
   }
 }
 
-/* ---- Utility ---- */
-function escHtml(str) {
+/* ─────────────────────────────
+   ESCAPE HTML
+───────────────────────────── */
+function esc(str) {
   return String(str)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
 
-/* =============================================
+/* ─────────────────────────────
    INIT
-   ============================================= */
+───────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   setFooterDates();

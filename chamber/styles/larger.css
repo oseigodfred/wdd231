@@ -6,279 +6,284 @@
 /* ===== TABLET: 600px ===== */
 @media (min-width: 600px) {
 
-  /* Header */
-  header {
-    padding: 0.75rem 1.5rem;
-  }
+    /* Header */
+    header {
+        padding: 0.75rem 1.5rem;
+    }
 
-  /* Nav becomes horizontal */
-  #main-nav {
-    display: flex;
-    flex-direction: row;
-    border-top: none;
-    padding: 0;
-    background: transparent;
-    gap: 0;
-  }
+    /* Nav becomes horizontal */
+    #main-nav {
+        display: flex !important;
+        flex-direction: row;
+        border-top: none;
+        padding: 0;
+        background: transparent;
+        gap: 0;
+    }
 
-  #menu-toggle {
-    display: none;
-  }
+    #menu-toggle {
+        display: none;
+    }
 
-  #main-nav a {
-    padding: 0.5rem 0.9rem;
-    border-left: none;
-    border-bottom: 2px solid transparent;
-    border-radius: var(--radius) var(--radius) 0 0;
-    font-size: 0.85rem;
-  }
+    #main-nav a {
+        padding: 0.5rem 0.9rem;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        border-radius: var(--radius) var(--radius) 0 0;
+        font-size: 0.85rem;
+    }
 
-  #main-nav a:hover,
-  #main-nav a[aria-current="page"] {
-    background: rgba(255,255,255,0.12);
-    border-bottom-color: var(--clr-secondary);
-  }
+    #main-nav a:hover,
+    #main-nav a[aria-current="page"] {
+        background: rgba(255, 255, 255, 0.12);
+        border-bottom-color: var(--clr-secondary);
+    }
 
-  /* Page hero */
-  .page-hero {
-    padding: 3rem 2rem;
-  }
+    /* Page hero */
+    .page-hero {
+        padding: 3rem 2rem;
+    }
 
-  .page-hero h1 {
-    font-size: 2.5rem;
-  }
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
 
-  .page-hero p {
-    font-size: 1.05rem;
-  }
+    .page-hero p {
+        font-size: 1.05rem;
+    }
 
-  /* Main */
-  main {
-    padding: 2rem 1.5rem;
-  }
+    /* Main */
+    main {
+        padding: 2rem 1.5rem;
+    }
 
-  /* Controls */
-  .directory-controls {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+    /* Controls */
+    .directory-controls {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-  /* Grid: 2 columns */
-  #members-container.grid-view {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
+    /* Grid: 2 columns */
+    #members-container.grid-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  /* Card refinements */
-  .card-img-wrap {
-    height: 130px;
-  }
+    /* Home hero */
+    .home-hero {
+        min-height: 420px;
+    }
 
-  /* List view adjustments */
-  .list-view .card-body {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 1rem;
-  }
+    .hero-content {
+        padding: 3rem 2rem;
+    }
 
-  /* Home page */
-  .home-section h2 {
-    font-size: 1.75rem;
-  }
+    .hero-display-title {
+        font-size: 2.6rem;
+    }
 
-  /* Weather widget */
-  .weather-widget {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
+    /* Page title in main */
+    .page-title {
+        font-size: 2rem;
+    }
 
-  .weather-main {
-    grid-column: 1 / -1;
-  }
+    /* Home main */
+    .home-main {
+        padding: 2rem 1.5rem;
+        gap: 3rem;
+    }
 
-  .weather-forecast {
-    grid-column: 1 / -1;
-  }
+    /* Events grid: 2 columns on tablet */
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+    }
 
-  /* Events grid: 2 columns */
-  .events-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
+    /* Spotlights: 2 cols */
+    .spotlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  /* Spotlights: 2 columns */
-  .spotlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    /* CTA */
+    .cta-banner {
+        padding: 2.5rem 2rem;
+    }
 
-  /* CTA */
-  .cta-section {
-    padding: 2.5rem 2rem;
-  }
+    .cta-banner h2 {
+        font-size: 1.8rem;
+    }
 
-  .cta-section h2 {
-    font-size: 1.8rem;
-  }
 
-  /* Footer */
-  footer {
-    padding: 2.5rem 1.5rem 1.5rem;
-  }
+    .list-view .card-body {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
 
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 0.8fr 1fr;
-    gap: 2rem;
-    align-items: start;
-  }
+    /* Footer */
+    footer {
+        padding: 2.5rem 1.5rem 1.5rem;
+    }
 
-  .footer-bottom {
-    text-align: left;
-  }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .footer-bottom {
+        text-align: left;
+    }
 }
+
 
 /* ===== DESKTOP: 900px ===== */
 @media (min-width: 900px) {
 
-  /* Header */
-  header {
-    padding: 0 2rem;
-  }
+    /* Header */
+    header {
+        padding: 0 2rem;
+    }
 
-  .header-inner {
-    height: 70px;
-  }
+    .header-inner {
+        height: 70px;
+    }
 
-  .site-title strong {
-    font-size: 1.15rem;
-  }
+    .site-title strong {
+        font-size: 1.15rem;
+    }
 
-  .site-title span {
-    font-size: 0.72rem;
-  }
+    .site-title span {
+        font-size: 0.72rem;
+    }
 
-  #main-nav a {
-    padding: 0.55rem 1rem;
-    font-size: 0.9rem;
-  }
+    #main-nav a {
+        padding: 0.55rem 1rem;
+        font-size: 0.9rem;
+    }
 
-  /* Page hero */
-  .page-hero {
-    padding: 4rem 2rem;
-  }
+    /* Page hero */
+    .page-hero {
+        padding: 4rem 2rem;
+    }
 
-  .page-hero h1 {
-    font-size: 3rem;
-  }
+    .page-hero h1 {
+        font-size: 3rem;
+    }
 
-  /* Main content */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2.5rem 2rem;
-  }
+    /* Main */
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2.5rem 2rem;
+    }
 
-  /* Directory grid: 3 columns */
-  #members-container.grid-view {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
+    /* Home hero */
+    .home-hero {
+        min-height: 500px;
+    }
 
-  .card-img-wrap {
+    .hero-display-title {
+        font-size: 3.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.05rem;
+    }
+
+    /* Home main */
+    .home-main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2.5rem 2rem;
+        /* Two-column layout: events+weather | spotlights */
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        grid-template-rows: auto auto auto;
+        gap: 2rem 2.5rem;
+    }
+
+    .events-section {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .weather-section {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .spotlights-section {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+
+    .cta-section {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+
+    /* Spotlights: single column in the sidebar */
+    .spotlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Events: 2-col within the column */
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Member grid: 3 columns on desktop */
+    #members-container.grid-view {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .card-img-wrap {
+        height: 140px;
+    }
+
+    .card-name {
+        font-size: 1.1rem;
+    }
+}
+
+.card-img-wrap {
     height: 140px;
-  }
+}
 
-  .card-name {
+.card-name {
     font-size: 1.1rem;
-  }
+}
 
-  /* List view refinements */
-  .list-view .member-card {
+/* List view: full-width nicely spaced */
+.list-view .member-card {
     padding: 1rem 1.5rem;
-  }
+}
 
-  .list-view .card-img-wrap {
+.list-view .card-img-wrap {
     width: 60px;
     height: 60px;
     font-size: 2rem;
-  }
-
-  /* Home page layout */
-  .home-section h2 {
-    font-size: 2rem;
-  }
-
-  /* Two-column layout: main + sidebar */
-  #main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2.5rem 2rem;
-    display: grid;
-    grid-template-columns: 1fr 340px;
-    grid-template-rows: auto auto auto;
-    gap: 2rem 2.5rem;
-  }
-
-  /* Grid positioning */
-  .home-section:nth-of-type(1) {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .home-section:nth-of-type(2) {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-  }
-
-  .home-section:nth-of-type(3) {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .cta-section {
-    grid-column: 1 / -1;
-    grid-row: 3;
-  }
-
-  /* Events: 2 columns within main column */
-  .events-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Spotlights: single column in sidebar */
-  .spotlights-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Weather adjustments */
-  .weather-widget {
-    grid-template-columns: 1fr;
-  }
-
-  /* Footer */
-  footer {
-    padding: 3rem 2rem 1.5rem;
-  }
-
-  .footer-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
 }
+
+/* Footer */
+footer {
+    padding: 3rem 2rem 1.5rem;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 /* ===== WIDE: 1200px ===== */
 @media (min-width: 1200px) {
 
-  /* Directory: 4 columns */
-  #members-container.grid-view {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  /* Events: 3 columns */
-  .events-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    #members-container.grid-view {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
