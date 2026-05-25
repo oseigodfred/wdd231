@@ -11,41 +11,33 @@ const LAT = 5.6037;
 const LON = -0.1870;
 
 /* Replace with your real OpenWeatherMap key */
-const OWM_KEY = '7410541168338b7e6442fb916d1df184';
+const OWM_KEY = '47d913b19be86078ac3cf9f19504b4ed';
 
-/* Resolve members.json path safely */
-const SCRIPT_DIR = (() => {
-  const currentScript = document.currentScript;
+const MEMBERS_URL = './data/members.json';
 
-  if (currentScript?.src) {
-    return currentScript.src.replace(/js\/home\.js.*$/, '');
-  }
-
-  return './';
-})();
 
 const MEMBERS_URL = `${SCRIPT_DIR}data/members.json`;
 
 /* ── WEATHER ICONS ── */
 const WEATHER_ICONS = {
-  '01d': '☀️',
-  '01n': '🌙',
-  '02d': '⛅',
-  '02n': '⛅',
-  '03d': '☁️',
-  '03n': '☁️',
-  '04d': '☁️',
-  '04n': '☁️',
-  '09d': '🌧️',
-  '09n': '🌧️',
-  '10d': '🌦️',
-  '10n': '🌧️',
-  '11d': '⛈️',
-  '11n': '⛈️',
-  '13d': '❄️',
-  '13n': '❄️',
-  '50d': '🌫️',
-  '50n': '🌫️',
+    '01d': '☀️',
+    '01n': '🌙',
+    '02d': '⛅',
+    '02n': '⛅',
+    '03d': '☁️',
+    '03n': '☁️',
+    '04d': '☁️',
+    '04n': '☁️',
+    '09d': '🌧️',
+    '09n': '🌧️',
+    '10d': '🌦️',
+    '10n': '🌧️',
+    '11d': '⛈️',
+    '11n': '⛈️',
+    '13d': '❄️',
+    '13n': '❄️',
+    '50d': '🌫️',
+    '50n': '🌫️',
 };
 
 /* ── BUSINESS ICONS ── */
@@ -53,70 +45,70 @@ const BIZ_ICONS = ['🏺', '💻', '💰', '🍽️', '🚢', '☀️', '📚', 
 
 /* ── MEMBERSHIP ── */
 const MEMBERSHIP = {
-  3: { label: 'Gold', cls: 'badge-gold' },
-  2: { label: 'Silver', cls: 'badge-silver' },
-  1: { label: 'Member', cls: 'badge-member' },
+    3: { label: 'Gold', cls: 'badge-gold' },
+    2: { label: 'Silver', cls: 'badge-silver' },
+    1: { label: 'Member', cls: 'badge-member' },
 };
 
 /* ─────────────────────────────
    WEATHER
 ───────────────────────────── */
 async function loadWeather() {
-  const curEl = document.getElementById('weather-current');
-  const foreEl = document.getElementById('weather-forecast');
+    const curEl = document.getElementById('weather-current');
+    const foreEl = document.getElementById('weather-forecast');
 
-  if (!curEl) return;
+    if (!curEl) return;
 
-  curEl.innerHTML = `
+    curEl.innerHTML = `
     <div class="weather-loading">
       Loading weather...
     </div>
   `;
 
-  /* Demo fallback */
-  if (!OWM_KEY || OWM_KEY === 'YOUR_API_KEY_HERE') {
-    renderDemoWeather(curEl, foreEl);
-    return;
-  }
-
-  try {
-    const currentURL =
-      `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=metric&appid=${OWM_KEY}`;
-
-    const forecastURL =
-      `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&cnt=24&appid=${OWM_KEY}`;
-
-    const currentResponse = await fetch(currentURL);
-    const forecastResponse = await fetch(forecastURL);
-
-    if (!currentResponse.ok || !forecastResponse.ok) {
-      throw new Error('Weather API request failed');
+    /* Demo fallback */
+    if (!OWM_KEY || OWM_KEY === '47d913b19be86078ac3cf9f19504b4ed') {
+        renderDemoWeather(curEl, foreEl);
+        return;
     }
 
-    const currentData = await currentResponse.json();
-    const forecastData = await forecastResponse.json();
+    try {
+        const currentURL =
+            `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=metric&appid=${OWM_KEY}`;
 
-    renderCurrentWeather(curEl, currentData);
-    renderForecast(foreEl, forecastData);
+        const forecastURL =
+            `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&cnt=24&appid=${OWM_KEY}`;
 
-  } catch (error) {
-    console.error('Weather API error:', error);
-    renderDemoWeather(curEl, foreEl);
-  }
+        const currentResponse = await fetch(currentURL);
+        const forecastResponse = await fetch(forecastURL);
+
+        if (!currentResponse.ok || !forecastResponse.ok) {
+            throw new Error('Weather API request failed');
+        }
+
+        const currentData = await currentResponse.json();
+        const forecastData = await forecastResponse.json();
+
+        renderCurrentWeather(curEl, currentData);
+        renderForecast(foreEl, forecastData);
+
+    } catch (error) {
+        console.error('Weather API error:', error);
+        renderDemoWeather(curEl, foreEl);
+    }
 }
 
 function renderCurrentWeather(el, data) {
-  const temp = Math.round(data.main.temp);
-  const feels = Math.round(data.main.feels_like);
-  const humidity = data.main.humidity;
-  const wind = Math.round(data.wind.speed * 3.6);
+    const temp = Math.round(data.main.temp);
+    const feels = Math.round(data.main.feels_like);
+    const humidity = data.main.humidity;
+    const wind = Math.round(data.wind.speed * 3.6);
 
-  const icon =
-    WEATHER_ICONS[data.weather[0].icon] || '🌡️';
+    const icon =
+        WEATHER_ICONS[data.weather[0].icon] || '🌡️';
 
-  const desc = data.weather[0].description;
+    const desc = data.weather[0].description;
 
-  el.innerHTML = `
+    el.innerHTML = `
     <div class="weather-icon-wrap">${icon}</div>
 
     <div>
@@ -136,35 +128,35 @@ function renderCurrentWeather(el, data) {
 }
 
 function renderForecast(el, data) {
-  if (!el || !data.list) return;
+    if (!el || !data.list) return;
 
-  const today = new Date().toDateString();
-  const forecastDays = {};
+    const today = new Date().toDateString();
+    const forecastDays = {};
 
-  for (const item of data.list) {
-    const dateKey =
-      new Date(item.dt * 1000).toDateString();
+    for (const item of data.list) {
+        const dateKey =
+            new Date(item.dt * 1000).toDateString();
 
-    if (dateKey === today) continue;
+        if (dateKey === today) continue;
 
-    if (
-      !forecastDays[dateKey] &&
-      Object.keys(forecastDays).length < 3
-    ) {
-      forecastDays[dateKey] = item;
+        if (
+            !forecastDays[dateKey] &&
+            Object.keys(forecastDays).length < 3
+        ) {
+            forecastDays[dateKey] = item;
+        }
     }
-  }
 
-  const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-  el.innerHTML = Object.values(forecastDays)
-    .map(item => {
-      const date = new Date(item.dt * 1000);
+    el.innerHTML = Object.values(forecastDays)
+        .map(item => {
+            const date = new Date(item.dt * 1000);
 
-      const icon =
-        WEATHER_ICONS[item.weather[0].icon] || '🌡️';
+            const icon =
+                WEATHER_ICONS[item.weather[0].icon] || '🌡️';
 
-      return `
+            return `
         <div class="forecast-day">
           <span class="f-label">
             ${DAYS[date.getDay()]}
@@ -181,15 +173,15 @@ function renderForecast(el, data) {
           </span>
         </div>
       `;
-    })
-    .join('');
+        })
+        .join('');
 }
 
 /* ─────────────────────────────
    DEMO WEATHER
 ───────────────────────────── */
 function renderDemoWeather(curEl, foreEl) {
-  curEl.innerHTML = `
+    curEl.innerHTML = `
     <div class="weather-icon-wrap">⛅</div>
 
     <div>
@@ -207,25 +199,25 @@ function renderDemoWeather(curEl, foreEl) {
     </div>
   `;
 
-  if (!foreEl) return;
+    if (!foreEl) return;
 
-  const today = new Date();
+    const today = new Date();
 
-  const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-  const demoForecast = [
-    { icon: '🌦️', hi: 30, lo: 24 },
-    { icon: '⛅', hi: 32, lo: 25 },
-    { icon: '☀️', hi: 34, lo: 26 },
-  ];
+    const demoForecast = [
+        { icon: '🌦️', hi: 30, lo: 24 },
+        { icon: '⛅', hi: 32, lo: 25 },
+        { icon: '☀️', hi: 34, lo: 26 },
+    ];
 
-  foreEl.innerHTML = demoForecast
-    .map((item, index) => {
-      const date = new Date(today);
+    foreEl.innerHTML = demoForecast
+        .map((item, index) => {
+            const date = new Date(today);
 
-      date.setDate(today.getDate() + index + 1);
+            date.setDate(today.getDate() + index + 1);
 
-      return `
+            return `
         <div class="forecast-day">
           <span class="f-label">
             ${DAYS[date.getDay()]}
@@ -238,73 +230,73 @@ function renderDemoWeather(curEl, foreEl) {
           <span class="f-lo">${item.lo}°</span>
         </div>
       `;
-    })
-    .join('');
+        })
+        .join('');
 }
 
 /* ─────────────────────────────
    SPOTLIGHTS
 ───────────────────────────── */
 async function loadSpotlights() {
-  const container =
-    document.getElementById('spotlights-container');
+    const container =
+        document.getElementById('spotlights-container');
 
-  if (!container) return;
+    if (!container) return;
 
-  try {
-    const response = await fetch(MEMBERS_URL);
+    try {
+        const response = await fetch(MEMBERS_URL);
 
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
 
-    const data = await response.json();
+        const data = await response.json();
 
-    const eligible = data.members.filter(
-      member => member.membership >= 2
-    );
+        const eligible = data.members.filter(
+            member => member.membership >= 2
+        );
 
-    if (!eligible.length) {
-      throw new Error('No spotlight members found');
-    }
+        if (!eligible.length) {
+            throw new Error('No spotlight members found');
+        }
 
-    eligible.sort(() => Math.random() - 0.5);
+        eligible.sort(() => Math.random() - 0.5);
 
-    const selected = eligible.slice(0, 3);
+        const selected = eligible.slice(0, 3);
 
-    container.innerHTML = selected
-      .map((member, index) =>
-        buildSpotlight(member, index)
-      )
-      .join('');
+        container.innerHTML = selected
+            .map((member, index) =>
+                buildSpotlight(member, index)
+            )
+            .join('');
 
-  } catch (error) {
-    console.error('Spotlight error:', error);
+    } catch (error) {
+        console.error('Spotlight error:', error);
 
-    container.innerHTML = `
+        container.innerHTML = `
       <p class="weather-error">
         ⚠️ Member spotlights unavailable.
       </p>
     `;
-  }
+    }
 }
 
 function buildSpotlight(member, index) {
-  const membership =
-    MEMBERSHIP[member.membership] || MEMBERSHIP[1];
+    const membership =
+        MEMBERSHIP[member.membership] || MEMBERSHIP[1];
 
-  const icon =
-    BIZ_ICONS[index % BIZ_ICONS.length];
+    const icon =
+        BIZ_ICONS[index % BIZ_ICONS.length];
 
-  let hostname = member.website;
+    let hostname = member.website;
 
-  try {
-    hostname = new URL(member.website).hostname;
-  } catch {
-    hostname = member.website;
-  }
+    try {
+        hostname = new URL(member.website).hostname;
+    } catch {
+        hostname = member.website;
+    }
 
-  return `
+    return `
     <article class="spotlight-card">
       <div class="spotlight-header">
         <div class="spotlight-logo">
@@ -354,83 +346,83 @@ function buildSpotlight(member, index) {
    MOBILE NAV
 ───────────────────────────── */
 function initNav() {
-  const toggle =
-    document.getElementById('menu-toggle');
+    const toggle =
+        document.getElementById('menu-toggle');
 
-  const nav =
-    document.getElementById('main-nav');
+    const nav =
+        document.getElementById('main-nav');
 
-  if (!toggle || !nav) return;
+    if (!toggle || !nav) return;
 
-  toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
+    toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
 
-    toggle.setAttribute(
-      'aria-expanded',
-      String(isOpen)
-    );
-  });
-
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-
-      toggle.setAttribute(
-        'aria-expanded',
-        'false'
-      );
+        toggle.setAttribute(
+            'aria-expanded',
+            String(isOpen)
+        );
     });
-  });
+
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('open');
+
+            toggle.setAttribute(
+                'aria-expanded',
+                'false'
+            );
+        });
+    });
 }
 
 /* ─────────────────────────────
    FOOTER
 ───────────────────────────── */
 function setFooterDates() {
-  const yearEl =
-    document.getElementById('copyright-year');
+    const yearEl =
+        document.getElementById('copyright-year');
 
-  const modEl =
-    document.getElementById('last-modified');
+    const modEl =
+        document.getElementById('last-modified');
 
-  if (yearEl) {
-    yearEl.textContent =
-      new Date().getFullYear();
-  }
+    if (yearEl) {
+        yearEl.textContent =
+            new Date().getFullYear();
+    }
 
-  if (modEl) {
-    const modifiedDate =
-      new Date(document.lastModified);
+    if (modEl) {
+        const modifiedDate =
+            new Date(document.lastModified);
 
-    modEl.textContent =
-      modifiedDate.toLocaleDateString(
-        'en-GH',
-        {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        }
-      );
-  }
+        modEl.textContent =
+            modifiedDate.toLocaleDateString(
+                'en-GH',
+                {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                }
+            );
+    }
 }
 
 /* ─────────────────────────────
    ESCAPE HTML
 ───────────────────────────── */
 function esc(str) {
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
 }
 
 /* ─────────────────────────────
    INIT
 ───────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
-  initNav();
-  setFooterDates();
-  loadWeather();
-  loadSpotlights();
+    initNav();
+    setFooterDates();
+    loadWeather();
+    loadSpotlights();
 });
