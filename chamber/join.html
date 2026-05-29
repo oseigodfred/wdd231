@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Join | Accra Chamber of Commerce</title>
 
-    <meta name="description" content="Join the Accra Chamber of Commerce to grow your business, network, and access exclusive member benefits and opportunities.">
+    <meta name="description"
+        content="Join the Accra Chamber of Commerce to grow your business, network, and access exclusive member benefits and opportunities.">
     <meta name="author" content="Godfred Osei">
 
     <link rel="icon" href="images/favicon.png" type="image/png">
@@ -14,7 +16,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
@@ -22,8 +26,9 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Join the Accra Chamber of Commerce">
-    <meta property="og:description" content="Apply for membership and unlock networking, training, and business growth opportunities in Accra.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:description"
+        content="Apply for membership and unlock networking, training, and business growth opportunities in Accra.">
+    <meta property="og:image" content="https://oseigodfred.github.io/wdd231/chamber/images/og_image.webp">
     <meta property="og:url" content="https://oseigodfred.github.io/wdd231/chamber/join.html">
 
     <script src="scripts/join.js" defer></script>
@@ -31,174 +36,151 @@
 
 <body>
 
-<header>
-    <h2>Accra Chamber of Commerce</h2>
-</header>
+    <header>
+        <h2>Accra Chamber of Commerce</h2>
+    </header>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="join.html" class="active">Join</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+        </ul>
+    </nav>
 
-<main class="join-page">
+    <main class="join-page">
 
-    <h1>Join the Accra Chamber of Commerce</h1>
+        <h1>Join the Accra Chamber of Commerce</h1>
 
-    <section class="form-section">
+        <section class="form-section">
 
-        <h2>Membership Application</h2>
+            <h2>Membership Application</h2>
 
-        <form method="get" action="thankyou.html">
+            <form method="get" action="thankyou.html">
 
-            <!-- FIRST NAME -->
-            <label>
-                First Name
-                <input type="text"
-                       name="fname"
-                       required
-                       autocomplete="given-name"
-                       title="Enter your first name">
-            </label>
+                <!-- FIRST NAME -->
+                <label>
+                    First Name
+                    <input type="text" name="fname" required autocomplete="given-name" title="Enter your first name">
+                </label>
 
-            <!-- LAST NAME -->
-            <label>
-                Last Name
-                <input type="text"
-                       name="lname"
-                       required
-                       autocomplete="family-name"
-                       title="Enter your last name">
-            </label>
+                <!-- LAST NAME -->
+                <label>
+                    Last Name
+                    <input type="text" name="lname" required autocomplete="family-name" title="Enter your last name">
+                </label>
 
-            <!-- ORGANIZATION TITLE -->
-            <label>
-                Organization Title
-                <input type="text"
-                       name="orgtitle"
-                       autocomplete="organization-title"
-                       pattern="[A-Za-z\s\-]{7,}"
-                       title="Minimum 7 characters, letters, spaces, or hyphens only">
-            </label>
+                <!-- ORGANIZATION TITLE -->
+                <label>
+                    Organization Title
+                    <input type="text" name="orgtitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"
+                        title="Minimum 7 characters, letters, spaces, or hyphens only">
+                </label>
 
-            <!-- EMAIL (FIXED) -->
-            <label>
-                Email
-                <input type="email"
-                       name="email"
-                       required
-                       autocomplete="email"
-                       placeholder="example@email.com"
-                       title="Enter your email address">
-            </label>
+                <!-- EMAIL (FIXED) -->
+                <label>
+                    Email
+                    <input type="email" name="email" required autocomplete="email" placeholder="example@email.com"
+                        title="Enter your email address">
+                </label>
 
-            <!-- PHONE (FIXED) -->
-            <label>
-                Mobile Phone
-                <input type="tel"
-                       name="phone"
-                       required
-                       autocomplete="tel"
-                       title="Enter your mobile phone number">
-            </label>
+                <!-- PHONE (FIXED) -->
+                <label>
+                    Mobile Phone
+                    <input type="tel" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
+                </label>
 
-            <!-- ORGANIZATION NAME (FIXED) -->
-            <label>
-                Organization Name
-                <input type="text"
-                       name="business"
-                       required
-                       autocomplete="organization"
-                       title="Enter your organization name">
-            </label>
+                <!-- ORGANIZATION NAME (FIXED) -->
+                <label>
+                    Organization Name
+                    <input type="text" name="business" required autocomplete="organization"
+                        title="Enter your organization name">
+                </label>
 
-            <!-- MEMBERSHIP LEVEL -->
-            <label>
-                Membership Level
-                <select name="membership" required title="Select membership level">
-                    <option value="">Select Membership</option>
-                    <option value="np">NP Membership</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
-            </label>
+                <!-- MEMBERSHIP LEVEL -->
+                <label>
+                    Membership Level
+                    <select name="membership" required title="Select membership level">
+                        <option value="">Select Membership</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
 
-            <!-- DESCRIPTION (FIXED) -->
-            <label>
-                Organization Description
-                <textarea name="description"
-                          rows="5"
-                          title="Describe your organization"></textarea>
-            </label>
+                <!-- DESCRIPTION (FIXED) -->
+                <label>
+                    Organization Description
+                    <textarea name="description" rows="5" title="Describe your organization"></textarea>
+                </label>
 
-            <!-- TIMESTAMP -->
-            <input type="hidden" name="timestamp" id="timestamp">
+                <!-- TIMESTAMP -->
+                <input type="hidden" name="timestamp" id="timestamp">
 
-            <input type="submit" value="Submit Application">
+                <input type="submit" value="Submit Application">
 
-        </form>
+            </form>
 
-    </section>
+        </section>
 
-    <!-- MEMBERSHIP CARDS -->
-    <section class="membership-cards">
+        <!-- MEMBERSHIP CARDS -->
+        <section class="membership-cards">
 
-        <div class="card">
-            <h3>NP Membership</h3>
-            <a href="#" data-modal="npModal">Learn More</a>
-        </div>
+            <div class="card">
+                <h3>NP Membership</h3>
+                <a href="#" data-modal="npModal">Learn More</a>
+            </div>
 
-        <div class="card">
-            <h3>Bronze Membership</h3>
-            <a href="#" data-modal="bronzeModal">Learn More</a>
-        </div>
+            <div class="card">
+                <h3>Bronze Membership</h3>
+                <a href="#" data-modal="bronzeModal">Learn More</a>
+            </div>
 
-        <div class="card">
-            <h3>Silver Membership</h3>
-            <a href="#" data-modal="silverModal">Learn More</a>
-        </div>
+            <div class="card">
+                <h3>Silver Membership</h3>
+                <a href="#" data-modal="silverModal">Learn More</a>
+            </div>
 
-        <div class="card">
-            <h3>Gold Membership</h3>
-            <a href="#" data-modal="goldModal">Learn More</a>
-        </div>
+            <div class="card">
+                <h3>Gold Membership</h3>
+                <a href="#" data-modal="goldModal">Learn More</a>
+            </div>
 
-    </section>
+        </section>
 
-</main>
+    </main>
 
-<!-- MODALS -->
-<dialog id="npModal">
-    <h2>NP Membership</h2>
-    <p>Free membership for nonprofit organizations.</p>
-    <button class="closeBtn">Close</button>
-</dialog>
+    <!-- MODALS -->
+    <dialog id="npModal">
+        <h2>NP Membership</h2>
+        <p>Free membership for nonprofit organizations.</p>
+        <button class="closeBtn">Close</button>
+    </dialog>
 
-<dialog id="bronzeModal">
-    <h2>Bronze Membership</h2>
-    <p>Basic networking and visibility benefits.</p>
-    <button class="closeBtn">Close</button>
-</dialog>
+    <dialog id="bronzeModal">
+        <h2>Bronze Membership</h2>
+        <p>Basic networking and visibility benefits.</p>
+        <button class="closeBtn">Close</button>
+    </dialog>
 
-<dialog id="silverModal">
-    <h2>Silver Membership</h2>
-    <p>Includes training, discounts, and featured listings.</p>
-    <button class="closeBtn">Close</button>
-</dialog>
+    <dialog id="silverModal">
+        <h2>Silver Membership</h2>
+        <p>Includes training, discounts, and featured listings.</p>
+        <button class="closeBtn">Close</button>
+    </dialog>
 
-<dialog id="goldModal">
-    <h2>Gold Membership</h2>
-    <p>Premium advertising, spotlight placement, and full benefits.</p>
-    <button class="closeBtn">Close</button>
-</dialog>
+    <dialog id="goldModal">
+        <h2>Gold Membership</h2>
+        <p>Premium advertising, spotlight placement, and full benefits.</p>
+        <button class="closeBtn">Close</button>
+    </dialog>
 
-<footer>
-    <p>&copy; 2026 Accra Chamber of Commerce</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Accra Chamber of Commerce</p>
+    </footer>
 
 </body>
+
 </html>
