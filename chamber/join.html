@@ -3,18 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Chamber</title>
 
+    <!-- REQUIRED META -->
+    <title>Join | Accra Chamber of Commerce</title>
+    <meta name="description" content="Join the Accra Chamber of Commerce to grow your business, network with professionals, and access exclusive membership benefits and opportunities.">
+    <meta name="author" content="Godfred Osei">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- GOOGLE FONTS (REQUIRED - NO @IMPORT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS FILES -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/join.css">
 
+    <!-- OPEN GRAPH (SOCIAL SHARING) -->
+    <meta property="og:title" content="Join the Accra Chamber of Commerce">
+    <meta property="og:description" content="Become a member of the Accra Chamber of Commerce and gain access to business networking, training, and exclusive growth opportunities.">
+    <meta property="og:image" content="https://oseigodfred.github.io/wdd231/chamber/images/chamber-og.jpg">
+    <meta property="og:url" content="https://oseigodfred.github.io/wdd231/chamber/join.html">
+
     <script src="scripts/join.js" defer></script>
 </head>
+
 <body>
 
 <header>
-    <h1>Accra Chamber of Commerce</h1>
+    <h2>Accra Chamber of Commerce</h2>
 </header>
 
 <nav>
@@ -28,6 +48,9 @@
 
 <main class="join-page">
 
+    <!-- FIXED: H1 MUST BE INSIDE MAIN -->
+    <h1>Join the Accra Chamber of Commerce</h1>
+
     <section class="form-section">
 
         <h2>Membership Application</h2>
@@ -36,63 +59,42 @@
 
             <label>
                 First Name
-                <input type="text"
-                    name="fname"
-                    required
-                    title="Enter your first name"
-                    autocomplete="given-name">
+                <input type="text" name="fname" required autocomplete="given-name" title="First Name">
             </label>
 
             <label>
                 Last Name
-                <input type="text"
-                    name="lname"
-                    required
-                    title="Enter your last name"
-                    autocomplete="family-name">
+                <input type="text" name="lname" required autocomplete="family-name" title="Last Name">
             </label>
 
             <label>
                 Organization Title
                 <input type="text"
-                    name="orgtitle"
-                    title="Organization title"
-                    autocomplete="organization-title"
-                    pattern="[A-Za-z\s\-]{7,}">
+                       name="orgtitle"
+                       autocomplete="organization-title"
+                       pattern="[A-Za-z\s\-]{7,}"
+                       title="Minimum 7 letters, hyphens and spaces allowed">
             </label>
 
             <label>
                 Email
-                <input type="email"
-                    name="email"
-                    required
-                    title="Enter email address"
-                    autocomplete="email"
-                    placeholder="example@email.com">
+                <input type="email" name="email" required autocomplete="email" placeholder="example@email.com">
             </label>
 
             <label>
                 Mobile Phone
-                <input type="tel"
-                    name="phone"
-                    required
-                    title="Enter mobile phone number"
-                    autocomplete="tel">
+                <input type="tel" name="phone" required autocomplete="tel">
             </label>
 
             <label>
-                Business Name
-                <input type="text"
-                    name="business"
-                    required
-                    title="Business name"
-                    autocomplete="organization">
+                Organization Name
+                <input type="text" name="business" required autocomplete="organization">
             </label>
 
             <label>
                 Membership Level
                 <select name="membership" required>
-                    <option value="">Choose a Membership</option>
+                    <option value="">Select Membership</option>
                     <option value="np">NP Membership</option>
                     <option value="bronze">Bronze Membership</option>
                     <option value="silver">Silver Membership</option>
@@ -101,13 +103,11 @@
             </label>
 
             <label>
-                Business Description
-                <textarea
-                    name="description"
-                    title="Business description"
-                    rows="5"></textarea>
+                Organization Description
+                <textarea name="description" rows="5"></textarea>
             </label>
 
+            <!-- Timestamp -->
             <input type="hidden" name="timestamp" id="timestamp">
 
             <input type="submit" value="Submit Application">
@@ -142,31 +142,28 @@
 
 </main>
 
-<!-- NP Modal -->
+<!-- MODALS -->
 <dialog id="npModal">
     <h2>NP Membership</h2>
-    <p>Free membership for non-profit organizations.</p>
+    <p>Free membership for nonprofit organizations.</p>
     <button class="closeBtn">Close</button>
 </dialog>
 
-<!-- Bronze Modal -->
 <dialog id="bronzeModal">
     <h2>Bronze Membership</h2>
-    <p>Basic advertising opportunities and event participation.</p>
+    <p>Basic visibility and networking opportunities.</p>
     <button class="closeBtn">Close</button>
 </dialog>
 
-<!-- Silver Modal -->
 <dialog id="silverModal">
     <h2>Silver Membership</h2>
-    <p>Includes training sessions, discounts, and featured listings.</p>
+    <p>Includes training, discounts, and featured listings.</p>
     <button class="closeBtn">Close</button>
 </dialog>
 
-<!-- Gold Modal -->
 <dialog id="goldModal">
     <h2>Gold Membership</h2>
-    <p>Premium spotlight advertising, event sponsorship, and all benefits.</p>
+    <p>Premium advertising, spotlight placement, and full benefits.</p>
     <button class="closeBtn">Close</button>
 </dialog>
 
