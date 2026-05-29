@@ -1,0 +1,239 @@
+/* ========================================
+   JOIN PAGE
+   ======================================== */
+
+.join-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ---------- Form Section ---------- */
+
+.form-section {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-section h2 {
+    font-family: var(--font-display);
+    color: var(--clr-primary);
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    font-weight: 600;
+    color: var(--clr-text);
+}
+
+form input,
+form select,
+form textarea {
+    padding: .8rem;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    background: #fff;
+    font-family: var(--font-body);
+    font-size: .95rem;
+    color: var(--clr-text);
+    transition: border-color var(--transition),
+                box-shadow var(--transition);
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--clr-secondary);
+    box-shadow: 0 0 0 3px rgba(196,120,26,.2);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+
+input[type="submit"] {
+    background: var(--clr-primary);
+    color: #fff;
+    border: none;
+    padding: .9rem 1.2rem;
+    border-radius: var(--radius);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+input[type="submit"]:hover {
+    background: #6e1d00;
+    transform: translateY(-2px);
+}
+
+/* ---------- Membership Cards ---------- */
+
+.membership-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    animation: cardFade .8s ease forwards;
+}
+
+.card:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.card:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.card:nth-child(4) {
+    animation-delay: .6s;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.card:nth-child(1)::before {
+    background: var(--clr-accent);
+}
+
+.card:nth-child(2)::before {
+    background: #b87333;
+}
+
+.card:nth-child(3)::before {
+    background: var(--clr-silver-badge);
+}
+
+.card:nth-child(4)::before {
+    background: var(--clr-gold-badge);
+}
+
+.card h3 {
+    font-family: var(--font-display);
+    color: var(--clr-primary);
+    margin-bottom: .5rem;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: .5rem;
+    font-weight: 600;
+    color: var(--clr-secondary);
+}
+
+.card a:hover {
+    color: var(--clr-primary);
+}
+
+/* ---------- Animation ---------- */
+
+@keyframes cardFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Dialog Modal ---------- */
+
+dialog {
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: var(--shadow-md);
+}
+
+dialog::backdrop {
+    background: rgba(0,0,0,.55);
+}
+
+dialog h2 {
+    font-family: var(--font-display);
+    color: var(--clr-primary);
+    margin-top: 0;
+}
+
+dialog p,
+dialog ul {
+    color: var(--clr-text);
+    line-height: 1.7;
+}
+
+.closeBtn {
+    margin-top: 1rem;
+    background: var(--clr-primary);
+    color: #fff;
+    border: none;
+    padding: .7rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.closeBtn:hover {
+    background: #6e1d00;
+}
+
+/* ---------- Required Field Styling ---------- */
+
+input:required,
+select:required {
+    border-left: 4px solid var(--clr-secondary);
+}
+
+input:required:valid,
+select:required:valid {
+    border-left-color: var(--clr-accent);
+}
+
+/* ---------- Desktop Layout ---------- */
+
+@media (min-width: 768px) {
+
+    .join-page {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .membership-cards {
+        position: sticky;
+        top: 6rem;
+    }
+}

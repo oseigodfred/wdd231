@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Thank You</title>
+
+<link rel="stylesheet" href="styles/base.css">
+
+<style>
+
+.info {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+.info p {
+    padding: .5rem 0;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Thank You</h1>
+</header>
+
+<main>
+
+<section class="info">
+
+<h2>Application Received</h2>
+
+<p><strong>First Name:</strong> <span id="fname"></span></p>
+<p><strong>Last Name:</strong> <span id="lname"></span></p>
+<p><strong>Email:</strong> <span id="email"></span></p>
+<p><strong>Phone:</strong> <span id="phone"></span></p>
+<p><strong>Business:</strong> <span id="business"></span></p>
+<p><strong>Date Submitted:</strong> <span id="timestamp"></span></p>
+
+</section>
+
+</main>
+
+<script>
+
+const params =
+    new URLSearchParams(window.location.search);
+
+document.getElementById("fname").textContent =
+    params.get("fname");
+
+document.getElementById("lname").textContent =
+    params.get("lname");
+
+document.getElementById("email").textContent =
+    params.get("email");
+
+document.getElementById("phone").textContent =
+    params.get("phone");
+
+document.getElementById("business").textContent =
+    params.get("business");
+
+document.getElementById("timestamp").textContent =
+    params.get("timestamp");
+
+</script>
+
+<footer>
+    <p>&copy; 2026 Accra Chamber of Commerce</p>
+</footer>
+
+</body>
+</html>

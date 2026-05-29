@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Chamber</title>
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Accra Chamber of Commerce</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+    </ul>
+</nav>
+
+<main class="join-page">
+
+    <section class="form-section">
+
+        <h2>Membership Application</h2>
+
+        <form method="get" action="thankyou.html">
+
+            <label>
+                First Name
+                <input type="text"
+                    name="fname"
+                    required
+                    title="Enter your first name"
+                    autocomplete="given-name">
+            </label>
+
+            <label>
+                Last Name
+                <input type="text"
+                    name="lname"
+                    required
+                    title="Enter your last name"
+                    autocomplete="family-name">
+            </label>
+
+            <label>
+                Organization Title
+                <input type="text"
+                    name="orgtitle"
+                    title="Organization title"
+                    autocomplete="organization-title"
+                    pattern="[A-Za-z\s\-]{7,}">
+            </label>
+
+            <label>
+                Email
+                <input type="email"
+                    name="email"
+                    required
+                    title="Enter email address"
+                    autocomplete="email"
+                    placeholder="example@email.com">
+            </label>
+
+            <label>
+                Mobile Phone
+                <input type="tel"
+                    name="phone"
+                    required
+                    title="Enter mobile phone number"
+                    autocomplete="tel">
+            </label>
+
+            <label>
+                Business Name
+                <input type="text"
+                    name="business"
+                    required
+                    title="Business name"
+                    autocomplete="organization">
+            </label>
+
+            <label>
+                Membership Level
+                <select name="membership" required>
+                    <option value="">Choose a Membership</option>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+
+            <label>
+                Business Description
+                <textarea
+                    name="description"
+                    title="Business description"
+                    rows="5"></textarea>
+            </label>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+
+            <input type="submit" value="Submit Application">
+
+        </form>
+
+    </section>
+
+    <section class="membership-cards">
+
+        <div class="card">
+            <h3>NP Membership</h3>
+            <a href="#" data-modal="npModal">Learn More</a>
+        </div>
+
+        <div class="card">
+            <h3>Bronze Membership</h3>
+            <a href="#" data-modal="bronzeModal">Learn More</a>
+        </div>
+
+        <div class="card">
+            <h3>Silver Membership</h3>
+            <a href="#" data-modal="silverModal">Learn More</a>
+        </div>
+
+        <div class="card">
+            <h3>Gold Membership</h3>
+            <a href="#" data-modal="goldModal">Learn More</a>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- NP Modal -->
+<dialog id="npModal">
+    <h2>NP Membership</h2>
+    <p>Free membership for non-profit organizations.</p>
+    <button class="closeBtn">Close</button>
+</dialog>
+
+<!-- Bronze Modal -->
+<dialog id="bronzeModal">
+    <h2>Bronze Membership</h2>
+    <p>Basic advertising opportunities and event participation.</p>
+    <button class="closeBtn">Close</button>
+</dialog>
+
+<!-- Silver Modal -->
+<dialog id="silverModal">
+    <h2>Silver Membership</h2>
+    <p>Includes training sessions, discounts, and featured listings.</p>
+    <button class="closeBtn">Close</button>
+</dialog>
+
+<!-- Gold Modal -->
+<dialog id="goldModal">
+    <h2>Gold Membership</h2>
+    <p>Premium spotlight advertising, event sponsorship, and all benefits.</p>
+    <button class="closeBtn">Close</button>
+</dialog>
+
+<footer>
+    <p>&copy; 2026 Accra Chamber of Commerce</p>
+</footer>
+
+</body>
+</html>
