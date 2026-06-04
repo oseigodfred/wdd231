@@ -1,81 +1,105 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Thank You</title>
+    ```
+    <title>Thank You | Accra Chamber of Commerce</title>
 
-<link rel="stylesheet" href="styles/base.css">
+    <meta name="description"
+        content="Thank you for applying to join the Accra Chamber of Commerce. Your application has been received.">
 
-<style>
+    <meta name="author" content="Godfred Osei">
 
-.info {
-    max-width: 700px;
-    margin: 2rem auto;
-    padding: 1rem;
-    border: 1px solid #ddd;
-}
+    <link rel="icon" href="images/favicon.png" type="image/png">
 
-.info p {
-    padding: .5rem 0;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-</style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <meta property="og:title" content="Thank You | Accra Chamber of Commerce">
+    <meta property="og:description" content="Your membership application has been successfully received.">
+    <meta property="og:image" content="https://oseigodfred.github.io/wdd231/chamber/images/og-image.webp">
+    <meta property="og:url" content="https://oseigodfred.github.io/wdd231/chamber/thankyou.html">
+
+    <script src="scripts/thankyou.js" defer></script>
+    ```
 
 </head>
+
 <body>
 
-<header>
-    <h1>Thank You</h1>
-</header>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="site-branding">
+                <img src="images/logo.webp" alt="Accra Chamber Logo" class="site-logo">
 
-<main>
+                ```
+                <div class="site-title">
+                    <strong>Accra Chamber of Commerce</strong>
+                    <span>Business Growth & Networking</span>
+                </div>
+            </a>
+        </div>
+        ```
 
-<section class="info">
+    </header>
 
-<h2>Application Received</h2>
+    <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="discover.html">Discover</a>
+        <a href="join.html">Join</a>
+    </nav>
 
-<p><strong>First Name:</strong> <span id="fname"></span></p>
-<p><strong>Last Name:</strong> <span id="lname"></span></p>
-<p><strong>Email:</strong> <span id="email"></span></p>
-<p><strong>Phone:</strong> <span id="phone"></span></p>
-<p><strong>Business:</strong> <span id="business"></span></p>
-<p><strong>Date Submitted:</strong> <span id="timestamp"></span></p>
+    <main>
 
-</section>
+        ```
+        <section class="page-hero">
+            <h1>Thank You</h1>
+            <p>Your membership application has been received.</p>
+        </section>
 
-</main>
+        <section class="info">
 
-<script>
+            <h2>Application Received</h2>
 
-const params =
-    new URLSearchParams(window.location.search);
+            <p>
+                Thank you for applying to join the Accra Chamber of Commerce.
+                Below is a summary of your submitted information.
+            </p>
 
-document.getElementById("fname").textContent =
-    params.get("fname");
+            <p><strong>First Name:</strong> <span id="fname"></span></p>
 
-document.getElementById("lname").textContent =
-    params.get("lname");
+            <p><strong>Last Name:</strong> <span id="lname"></span></p>
 
-document.getElementById("email").textContent =
-    params.get("email");
+            <p><strong>Email:</strong> <span id="email"></span></p>
 
-document.getElementById("phone").textContent =
-    params.get("phone");
+            <p><strong>Phone:</strong> <span id="phone"></span></p>
 
-document.getElementById("business").textContent =
-    params.get("business");
+            <p><strong>Business:</strong> <span id="business"></span></p>
 
-document.getElementById("timestamp").textContent =
-    params.get("timestamp");
+            <p><strong>Date Submitted:</strong> <span id="timestamp"></span></p>
 
-</script>
+        </section>
+        ```
 
-<footer>
-    <p>&copy; 2026 Accra Chamber of Commerce</p>
-</footer>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Accra Chamber of Commerce | Godfred Osei</p>
+    </footer>
 
 </body>
+
 </html>

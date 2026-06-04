@@ -1,271 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="The Accra Chamber of Commerce fosters business growth, community networking, and economic development across Greater Accra, Ghana.">
-  <meta name="author" content="Godfred Osei">
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Accra Chamber of Commerce Home Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Home | Accra Chamber of Commerce</title>
+    <title>Accra Chamber of Commerce</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
-  <!-- Facebook / Open Graph Meta -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Accra Chamber of Commerce — Greater Accra, Ghana">
-  <meta property="og:description"
-    content="Fostering business growth, community networking, and economic development across Greater Accra since 1956. Join today.">
-  <meta property="og:image" content="https://oseigodfred.github.io/wdd231/chamber/images/og_image.webp">
-  <meta property="og:url" content="https://oseigodfred.github.io/wdd231/chamber/index.html">
-  <meta property="og:site_name" content="Accra Chamber of Commerce">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Accra Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourdomain.com/images/hero.webp">
+    <meta property="og:url" content="https://yourdomain.com/chamber/">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
-
-  <!-- JavaScript -->
-  <script src="scripts/home.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 </head>
 
 <body>
 
-  <!-- Skip Navigation -->
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+<header>
+    <h1>Accra Chamber of Commerce</h1>
 
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="header-inner">
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+</header>
 
-      <a class="site-branding" href="index.html" aria-label="Accra Chamber of Commerce – Home">
-        <svg class="site-logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-          focusable="false">
-          <rect width="64" height="64" rx="10" fill="rgba(255,255,255,0.15)"></rect>
+<main>
 
-          <text x="32" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="36" font-weight="bold"
-            fill="#C4781A">A</text>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/hero.webp" alt="Accra business district">
+        <a href="join.html" class="cta-button">Join the Chamber</a>
+    </section>
 
-          <rect x="10" y="50" width="44" height="5" rx="2.5" fill="none" stroke="#C4781A" stroke-width="1.5"></rect>
+    <!-- Information Grid -->
+    <div class="info-grid">
 
-          <circle cx="21" cy="52.5" r="2" fill="#8B2500"></circle>
-          <circle cx="32" cy="52.5" r="2" fill="#C4781A"></circle>
-          <circle cx="43" cy="52.5" r="2" fill="#1A6B3C"></circle>
-        </svg>
+        <section class="events">
+            <h2>Current Events</h2>
 
-        <div class="site-title">
-          <strong>Accra Chamber</strong>
-          <span>of Commerce</span>
-        </div>
-      </a>
-
-      <button type="button" id="menu-toggle" aria-controls="main-nav" aria-expanded="false"
-        aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav id="main-nav" aria-label="Primary">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="directory.html">Directory</a>
-        <a href="join.html">Join</a>
-        <a href="discover.html">Discover</a>
-      </nav>
-
-    </div>
-  </header>
-
-  <!-- ===== HERO ===== -->
-  <section class="home-hero" aria-label="Welcome banner">
-    <div class="hero-bg" aria-hidden="true"></div>
-
-    <div class="hero-content">
-      <span class="hero-eyebrow">
-        Accra, Greater Accra &mdash; Ghana
-      </span>
-
-      <p class="hero-tagline">
-        The Accra Chamber of Commerce connects entrepreneurs,
-        champions local enterprise, and drives economic growth
-        across Greater Accra since 1956.
-      </p>
-
-      <div class="hero-actions">
-
-        <a href="join.html" class="chamber-btn chamber-btn-join">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-
-          Join the Chamber
-        </a>
-
-        <a href="directory.html" class="chamber-btn chamber-btn-browse">
-          Browse Directory
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== MAIN ===== -->
-  <main id="main-content" class="home-main">
-
-    <h1 class="page-title">
-      Accra Chamber of Commerce
-    </h1>
-
-    <!-- ── EVENTS ── -->
-    <section class="events-section" aria-labelledby="events-heading">
-
-      <div class="section-heading">
-        <h2 id="events-heading">Upcoming Events</h2>
-        <span class="heading-line" aria-hidden="true"></span>
-      </div>
-
-      <div class="events-grid">
-
-        <article class="event-card">
-          <div class="event-date-block">
-            <span class="month">Jun</span>
-            <span class="day">4</span>
-          </div>
-
-          <div class="event-info">
-            <h3>Annual Business Gala</h3>
-
+            <h3>Business Networking Summit</h3>
             <p>
-              Black-tie networking evening celebrating
-              Accra's top businesses. Keynote by the Mayor.
+                Connect with entrepreneurs, investors, and business
+                leaders across Greater Accra.
             </p>
+        </section>
 
-            <span class="event-tag">Networking</span>
-          </div>
-        </article>
+        <section class="weather">
+            <h2>Weather</h2>
 
-        <!-- Keep remaining articles exactly the same -->
+            <p id="current-temp"></p>
+            <p id="weather-desc"></p>
 
-      </div>
-    </section>
-
-    <!-- WEATHER -->
-    <section class="weather-section" aria-labelledby="weather-heading">
-
-      <div class="section-heading">
-        <h2 id="weather-heading">Accra Weather</h2>
-        <span class="heading-line" aria-hidden="true"></span>
-      </div>
-
-      <div class="weather-card">
-
-        <div class="weather-current" id="weather-current" aria-live="polite">
-
-          <div class="weather-loading">
-            Loading weather data…
-          </div>
-
-        </div>
-
-        <div class="weather-forecast" id="weather-forecast">
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SPOTLIGHTS -->
-    <section class="spotlights-section" aria-labelledby="spotlights-heading">
-
-      <div class="section-heading">
-        <h2 id="spotlights-heading">Member Spotlights</h2>
-        <span class="heading-line" aria-hidden="true"></span>
-      </div>
-
-      <div id="spotlights-container" class="spotlights-grid" role="region" aria-live="polite"
-        aria-label="Featured chamber members">
-      </div>
-
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section" aria-labelledby="cta-heading">
-
-      <div class="cta-banner">
-
-        <h2 id="cta-heading">
-          Grow Your Business with Us
-        </h2>
-
-        <p>
-          Join hundreds of Accra businesses enjoying networking events,
-          business resources, and community advocacy.
-          Membership starts at no cost.
-        </p>
-
-        <a href="join.html" class="chamber-btn chamber-btn-join">
-
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            aria-hidden="true">
-
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-
-          Become a Member
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-
-    <div class="footer-grid">
-
-      <div class="footer-brand">
-
-        <strong>Accra Chamber of Commerce</strong>
-
-        <address>
-          14 Independence Avenue<br>
-          Accra, Greater Accra, Ghana<br>
-
-          <a href="mailto:info@accrachamber.org">
-            info@accrachamber.org
-          </a><br>
-
-          <a href="tel:+233302779100">
-            +233-30-277-9100
-          </a>
-        </address>
-
-      </div>
-
-      <!-- KEEP YOUR SOCIAL + FOOTER CONTENT EXACTLY THE SAME -->
+            <h3>3-Day Forecast</h3>
+            <div id="forecast"></div>
+        </section>
 
     </div>
 
-    <div class="footer-bottom">
-      <p>
-        Accra Chamber of Commerce &bull;
-        Strengthening Accra's Business Community Since 1956
-      </p>
-    </div>
+    <!-- Spotlight Section -->
+    <section class="spotlights">
+        <h2>Business Spotlights</h2>
 
-  </footer>
+        <div id="spotlight-container"></div>
+    </section>
 
+</main>
 
+<footer>
+    <p>&copy; 2026 Accra Chamber of Commerce</p>
+    <p>Your Name | WDD 231</p>
+</footer>
 
 </body>
-
 </html>

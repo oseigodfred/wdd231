@@ -61,7 +61,7 @@ form select:focus,
 form textarea:focus {
     outline: none;
     border-color: var(--clr-secondary);
-    box-shadow: 0 0 0 3px rgba(196,120,26,.2);
+    box-shadow: 0 0 0 3px rgba(196, 120, 26, .2);
 }
 
 form textarea {
@@ -107,9 +107,17 @@ input[type="submit"]:hover {
 }
 
 /* Stagger animation */
-.card:nth-child(2) { animation-delay: .15s; }
-.card:nth-child(3) { animation-delay: .3s; }
-.card:nth-child(4) { animation-delay: .45s; }
+.card:nth-child(2) {
+    animation-delay: .15s;
+}
+
+.card:nth-child(3) {
+    animation-delay: .3s;
+}
+
+.card:nth-child(4) {
+    animation-delay: .45s;
+}
 
 /* Card header color bar */
 .card::before {
@@ -126,10 +134,21 @@ input[type="submit"]:hover {
     position: relative;
 }
 
-.card:nth-child(1)::before { background: var(--clr-accent); }
-.card:nth-child(2)::before { background: #b87333; }
-.card:nth-child(3)::before { background: var(--clr-silver-badge); }
-.card:nth-child(4)::before { background: var(--clr-gold-badge); }
+.card:nth-child(1)::before {
+    background: var(--clr-accent);
+}
+
+.card:nth-child(2)::before {
+    background: #b87333;
+}
+
+.card:nth-child(3)::before {
+    background: var(--clr-silver-badge);
+}
+
+.card:nth-child(4)::before {
+    background: var(--clr-gold-badge);
+}
 
 /* Card text */
 .card h3 {
@@ -139,13 +158,15 @@ input[type="submit"]:hover {
 }
 
 .card a {
-    color: var(--clr-primary); /* FIX contrast issue */
+    color: var(--clr-primary);
+    /* FIX contrast issue */
     font-weight: 700;
     text-decoration: none;
 }
 
 .card a:hover {
-    color: #5c2500; /* darker for accessibility */
+    color: #5c2500;
+    /* darker for accessibility */
 }
 
 /* ---------- MODALS ---------- */
@@ -160,7 +181,7 @@ dialog {
 }
 
 dialog::backdrop {
-    background: rgba(0,0,0,.55);
+    background: rgba(0, 0, 0, .55);
 }
 
 dialog h2 {
@@ -218,4 +239,31 @@ select:required:valid {
         position: sticky;
         top: 6rem;
     }
+
+    /* THANK YOU PAGE */
+
+    .info {
+        max-width: 700px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        background: var(--clr-surface);
+        border: 1px solid var(--clr-border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .info h2 {
+        color: var(--clr-primary);
+        margin-bottom: 1rem;
+    }
+
+    .info p {
+        padding: .75rem 0;
+        border-bottom: 1px solid var(--clr-border);
+    }
+
+    .info p:last-child {
+        border-bottom: none;
+    }
+
 }
