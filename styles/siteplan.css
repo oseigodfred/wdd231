@@ -1,0 +1,48 @@
+:root {
+    --primary: #0A3D62;
+    --secondary: #1ABC9C;
+    --background: #F4F4F4;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--background);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header,
+footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    background: var(--white);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--secondary);
+    border-radius: 5px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary);
+}
+
+pre {
+    background: #eee;
+    padding: 1rem;
+    overflow-x: auto;
+}
