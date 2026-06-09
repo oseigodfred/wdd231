@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Your Name">
@@ -14,73 +15,74 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Accra Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://yourdomain.com/images/hero.webp">
-    <meta property="og:url" content="https://yourdomain.com/chamber/">
+    <meta property="og:image" content="https://oseigodfred.github.io/wdd231/chamber/images/og_image.webp">
+    <meta property="og:url" content="https://oseigodfred.github.io/wdd231/chamber/index.html">
 
     <script src="scripts/home.js" defer></script>
 </head>
 
 <body>
 
-<header>
-    <h1>Accra Chamber of Commerce</h1>
+    <header>
+        <h1>Accra Chamber of Commerce</h1>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="discover.html">Discover</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
+    <main>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="images/hero.webp" alt="Accra business district">
-        <a href="join.html" class="cta-button">Join the Chamber</a>
-    </section>
-
-    <!-- Information Grid -->
-    <div class="info-grid">
-
-        <section class="events">
-            <h2>Current Events</h2>
-
-            <h3>Business Networking Summit</h3>
-            <p>
-                Connect with entrepreneurs, investors, and business
-                leaders across Greater Accra.
-            </p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero.webp" alt="Accra business district">
+            <a href="join.html" class="cta-button">Join the Chamber</a>
         </section>
 
-        <section class="weather">
-            <h2>Weather</h2>
+        <!-- Information Grid -->
+        <div class="info-grid">
 
-            <p id="current-temp"></p>
-            <p id="weather-desc"></p>
+            <section class="events">
+                <h2>Current Events</h2>
 
-            <h3>3-Day Forecast</h3>
-            <div id="forecast"></div>
+                <h3>Business Networking Summit</h3>
+                <p>
+                    Connect with entrepreneurs, investors, and business
+                    leaders across Greater Accra.
+                </p>
+            </section>
+
+            <section class="weather">
+                <h2>Weather</h2>
+
+                <p id="current-temp"></p>
+                <p id="weather-desc"></p>
+
+                <h3>3-Day Forecast</h3>
+                <div id="forecast"></div>
+            </section>
+
+        </div>
+
+        <!-- Spotlight Section -->
+        <section class="spotlights">
+            <h2>Business Spotlights</h2>
+
+            <div id="spotlight-container"></div>
         </section>
 
-    </div>
+    </main>
 
-    <!-- Spotlight Section -->
-    <section class="spotlights">
-        <h2>Business Spotlights</h2>
-
-        <div id="spotlight-container"></div>
-    </section>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Accra Chamber of Commerce</p>
-    <p>Your Name | WDD 231</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Accra Chamber of Commerce</p>
+        <p>Godfred Osei | WDD 231</p>
+    </footer>
 
 </body>
+
 </html>

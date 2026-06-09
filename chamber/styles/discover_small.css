@@ -1,0 +1,291 @@
+/* ========================================
+DISCOVER PAGE
+ACCRA CHAMBER OF COMMERCE
+======================================== */
+
+:root {
+    --clr-primary: #8B2500;
+    --clr-secondary: #C4781A;
+    --clr-accent: #1A6B3C;
+
+
+    --clr-bg: #FAF6EE;
+    --clr-surface: #FFFFFF;
+    --clr-text: #1C1309;
+    --clr-text-muted: #6B5B4E;
+    --clr-border: #E2D5C3;
+
+    --radius: 8px;
+    --radius-lg: 16px;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, .08);
+    --shadow-md: 0 8px 20px rgba(0, 0, 0, .12);
+
+
+}
+
+/* ---------- Base ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background: var(--clr-primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+/* ---------- Navigation ---------- */
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: .75rem;
+    border-radius: 6px;
+}
+
+nav a:hover,
+nav a.active {
+    background: rgba(255, 255, 255, .15);
+}
+
+/* ---------- Main ---------- */
+
+.discover-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.discover-main h1 {
+    text-align: center;
+    color: var(--clr-primary);
+    margin-bottom: 2rem;
+}
+
+/* ---------- Visit Message ---------- */
+
+#visit-message {
+    background: white;
+    border-left: 5px solid var(--clr-secondary);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Grid ---------- */
+
+#discover-grid {
+    display: grid;
+    gap: 1.5rem;
+
+
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+
+
+}
+
+/* Grid Areas */
+
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.card7 {
+    grid-area: card7;
+}
+
+.card8 {
+    grid-area: card8;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+
+}
+
+.card h2 {
+    color: var(--clr-primary);
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.card figure {
+    margin: 0;
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card address {
+    padding: 1rem;
+    color: var(--clr-text-muted);
+    font-style: italic;
+}
+
+.card p {
+    padding: 0 1rem 1rem;
+    flex-grow: 1;
+}
+
+.card button {
+    margin: 0 1rem 1rem;
+    padding: .75rem 1rem;
+
+
+    border: none;
+    border-radius: var(--radius);
+
+    background: var(--clr-primary);
+    color: white;
+
+    cursor: pointer;
+
+
+}
+
+.card button:hover {
+    background: var(--clr-secondary);
+}
+
+/* ---------- Tablet ---------- */
+
+@media (min-width: 641px) {
+
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+    }
+
+    #discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+
+    .card img {
+        transition: transform .3s ease,
+            filter .3s ease;
+    }
+
+    .card img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.05);
+    }
+
+
+}
+
+/* ---------- Desktop ---------- */
+
+@media (min-width: 1025px) {
+
+
+    #discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+
+    .card {
+        transition:
+            transform .3s ease,
+            box-shadow .3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+
+
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    margin-top: 3rem;
+    background: var(--clr-primary);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
