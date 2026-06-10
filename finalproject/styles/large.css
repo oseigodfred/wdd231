@@ -1,0 +1,152 @@
+/* ============================================================
+   Tech Skills Hub Ghana — large.css
+   Tablet (> 640px) and Desktop (> 900px) overrides
+   Import AFTER small.css
+   ============================================================ */
+
+/* ============================================================
+   TABLET — min-width: 641px
+   ============================================================ */
+@media (min-width: 641px) {
+
+    /* Navbar — hide hamburger, show horizontal menu */
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        background: transparent;
+        padding: 0;
+        border-top: none;
+        gap: 0.25rem;
+        box-shadow: none;
+    }
+
+    .nav-menu a {
+        padding: 0.45em 0.9em;
+    }
+
+    /* Hero — row actions & wider stats gap */
+    .hero-content {
+        padding: 5rem 0 4rem;
+    }
+
+    .hero-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .hero-stats {
+        gap: 2rem;
+    }
+
+    /* Mission values — 2 columns */
+    .mission-values {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Skills grid — auto-fit */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* Resources — auto-fill */
+    .resource-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    /* Languages — auto-fill */
+    .lang-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    /* Platforms — auto-fill */
+    .platform-list {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    /* Career paths — auto-fill */
+    .path-grid {
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    }
+
+    /* Opportunities — auto-fill */
+    .opp-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    /* Tips — auto-fill */
+    .tips-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    /* Form row — 2 columns */
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Dev recommendations — auto-fill */
+    .rec-grid {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+
+    /* Footer — 2 columns on tablet */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Mission image — restore height */
+    .mission-img-wrap {
+        max-height: none;
+    }
+
+    .mission-img-wrap img {
+        height: 300px;
+    }
+
+}
+
+/* ============================================================
+   DESKTOP — min-width: 901px
+   ============================================================ */
+@media (min-width: 901px) {
+
+    /* Mission — 2-column side-by-side layout */
+    .mission-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .mission-img-wrap img {
+        height: 380px;
+    }
+
+    /* Hero visual card — visible on large screens */
+    .hero-visual {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 42%;
+        max-width: 480px;
+        z-index: 2;
+    }
+
+    /* Footer — 4-column layout */
+    .footer-grid {
+        grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+        gap: 2.5rem;
+    }
+
+    /* Contact — 2-column layout */
+    .contact-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+}
