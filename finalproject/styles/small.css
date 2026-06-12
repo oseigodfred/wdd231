@@ -6,13 +6,13 @@
 /* ---------- CSS Custom Properties ---------- */
 :root {
   --dark-blue: #0A3D62;
-  --teal: #1ABC9C;
-  --teal-dark: #159b7f;
+  --teal: #0f766e;
+  --teal-dark: #0b5f59;
   --light-gray: #F4F4F4;
   --white: #FFFFFF;
   --text-dark: #1a1a2e;
   --text-mid: #444455;
-  --text-light: #777788;
+  --text-light: #5a5a6a;
   --border: #dde3ec;
   --shadow-sm: 0 2px 8px rgba(10, 61, 98, 0.08);
   --shadow-md: 0 6px 24px rgba(10, 61, 98, 0.13);
@@ -372,14 +372,14 @@ p:last-child {
 }
 
 .nav-cta {
-  background: var(--teal) !important;
-  color: var(--white) !important;
-  padding: 0.45em 1.2em !important;
+  background: var(--teal);
+  color: var(--white);
+  padding: 0.45em 1.2em;
 }
 
 .nav-cta:hover {
-  background: var(--teal-dark) !important;
-  color: var(--white) !important;
+  background: var(--teal-dark);
+  color: var(--white);
 }
 
 /* ============================================================
@@ -1007,10 +1007,6 @@ p:last-child {
 
 .section-intro p {
   font-size: 0.97rem;
-}
-
-.anchor-offset {
-  scroll-margin-top: 90px;
 }
 
 .resources-section {
