@@ -4,490 +4,761 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Skills Hub Ghana | Learn Tech Skills and Build Your Career</title>
     <meta name="description"
-        content="Tech Skills Hub Ghana – empowering students and young professionals with technology skills and career guidance in Ghana.">
+        content="Explore free technology learning resources, career guidance, and opportunities that help Ghanaian students and professionals build successful tech careers.">
+    <meta name="keywords"
+        content="Tech Skills Ghana, Learn Coding Ghana, Programming Courses Ghana, Cybersecurity Ghana, Tech Career Ghana, Web Development Ghana">
     <meta name="author" content="Godfred Osei">
 
-    <link rel="icon" href="images/favicon.ico">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Tech Skills Hub Ghana – Learn Tech Skills and Build Your Career">
+    <meta property="og:description"
+        content="Discover learning resources, career pathways, and technology opportunities designed for students and professionals in Ghana.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oseigodfred.github.io/wdd231/finalproject/index.html">
+    <meta property="og:image" content="https://oseigodfred.github.io/wdd231/finalproject/images/og_image.webp">
 
-    <title>Tech Skills Hub Ghana | Home</title>
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tech Skills Hub Ghana – Learn Tech Skills and Build Your Career">
+    <meta name="twitter:description"
+        content="Discover learning resources, career pathways, and technology opportunities designed for students and professionals in Ghana.">
+    <meta name="twitter:image" content="https://oseigodfred.github.io/wdd231/finalproject/images/og_image.webp">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:wght@700&display=swap"
-        rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
 
-    <!-- Stylesheet -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
-    <meta property="og:title" content="Tech Skills Hub Ghana | Home">
-    <meta property="og:description"
-        content="Empowering students and young professionals with technology skills and career guidance in Ghana.">
-    <meta property="og:image" content="https://oseigodfred.github.io/wdd231/finalproject/images/logo.webp">
-    <meta property="og:url" content="https://oseigodfred.github.io/wdd231/finalproject/">
-
-    <script src="scripts/main.js" defer></script>
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
 </head>
 
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- ===================== HEADER ===================== -->
-    <header class="site-header" role="banner">
+    <!-- Header and Navigation -->
+    <header class="site-header">
         <div class="container">
-            <nav class="nav-inner" aria-label="Main navigation">
+            <nav class="main-nav" aria-label="Main navigation">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">TSH</span>
+                        <span class="logo-text">Tech Skills Hub Ghana</span>
+                    </a>
+                </div>
 
-                <!-- Logo -->
-                <a href="index.html" class="nav-logo" aria-label="Tech Skills Hub Ghana – Home">
-                    <span class="logo-icon" aria-hidden="true">
-                        <img src="images/logo.webp" alt="Tech Skills Hub Ghana Logo" width="50" height="50">
-                    </span>
-
-                </a>
-
-                <!-- Desktop Menu -->
-                <ul class="nav-menu" role="list" id="navMenu">
-                    <li><a href="index.html" aria-current="page">Home</a></li>
-                    <li><a href="resources.html">Learning Resources</a></li>
-                    <li><a href="careers.html">Career Opportunities</a></li>
-                    <li><a href="careers.html#inquiry" class="nav-cta">Get Started</a></li>
-                </ul>
-
-                <!-- Hamburger -->
-                <button class="nav-toggle" aria-controls="navMenu" aria-expanded="false"
-                    aria-label="Toggle navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
                 </button>
 
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-
-        <!-- ===================== HERO ===================== -->
-        <section class="hero" aria-label="Hero section">
-            <div class="hero-bg" aria-hidden="true"></div>
-            <div class="hero-overlay" aria-hidden="true"></div>
-
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-badge animate-fade-up delay-1" aria-hidden="true">
-                        🇬🇭 &nbsp;Proudly Ghanaian &nbsp;•&nbsp; Tech-Driven Future
-                    </div>
-
-                    <h1 class="animate-fade-up delay-2">
-                        Unlock Your<br>
-                        <span>Tech Career</span><br>
-                        in Ghana
-                    </h1>
-
-                    <p class="hero-lead animate-fade-up delay-3">
-                        Tech Skills Hub Ghana equips students and young professionals with
-                        in-demand digital skills, curated learning resources, and career
-                        guidance to thrive in the technology industry.
-                    </p>
-
-                    <div class="hero-actions animate-fade-up delay-4">
-                        <a href="resources.html" class="btn btn-primary">
-                            Explore Resources
-                        </a>
-                        <a href="careers.html" class="btn btn-outline">
-                            View Careers
-                        </a>
-                    </div>
-
-                    <div class="hero-stats animate-fade-up delay-4">
-                        <div class="stat-item">
-                            <span class="stat-num" data-target="500" data-suffix="+">500+</span>
-                            <span class="stat-label">Learning Resources</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num" data-target="12" data-suffix="">12</span>
-                            <span class="stat-label">Tech Skill Tracks</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num" data-target="8000" data-suffix="+">8000+</span>
-                            <span class="stat-label">Students Reached</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num" data-target="100" data-suffix="%">100%</span>
-                            <span class="stat-label">Free to Access</span>
-                        </div>
+                    <h1 class="hero-title">Build Your Future in Technology</h1>
+                    <p class="hero-subtitle">Empower your tech career with world-class learning resources, career
+                        guidance, and opportunities designed specifically for Ghanaian students and professionals.</p>
+                    <div class="hero-actions">
+                        <a href="#learning-paths" class="btn btn-primary">Explore Learning Paths</a>
+                        <a href="#resources" class="btn btn-secondary">Browse Resources</a>
                     </div>
                 </div>
-            </div>
-
-            <!-- Hero floating visual (large screens) -->
-            <div class="hero-visual" aria-hidden="true">
-                <div class="hero-card">
-                    <img src="https://images.pexels.com/photos/33920044/pexels-photo-33920044.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                        alt="Students learning coding and software development in Accra, Ghana" width="480"
-                        height="280">
-                    <div class="hero-card-info">
-                        <p>Featured Story</p>
-                        <strong>Students coding in Accra, Ghana 🇬🇭</strong>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- ===================== MISSION ===================== -->
-        <section class="mission" id="mission" aria-labelledby="mission-heading">
-            <div class="container">
-                <div class="mission-grid">
-
-                    <!-- Image -->
-                    <div class="mission-img-wrap reveal">
-                        <img src="https://images.pexels.com/photos/33920035/pexels-photo-33920035.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                            alt="Students engaged in hands-on technology workshop" width="600" height="380"
-                            loading="lazy">
-                        <div class="mission-img-badge">
-                            <span class="badge-icon"></span>
-                            <div>
-                                <strong>Our Mission</strong>
-                                <span>Empowering Ghanaian Youth</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text -->
-                    <div class="mission-text reveal">
-                        <span class="section-tag">About Us</span>
-                        <h2 id="mission-heading">Bridging the Tech Skills Gap in Ghana</h2>
-                        <div class="divider" style="margin: 0.75rem 0 1.2rem;"></div>
-                        <p>
-                            Tech Skills Hub Ghana is dedicated to empowering the next generation
-                            of Ghanaian technology professionals. We believe every student and
-                            young professional in Ghana deserves access to world-class digital
-                            education regardless of background or location.
-                        </p>
-                        <p>
-                            Through curated resources, career pathways, and community support,
-                            we are building a tech-savvy Ghana that is ready to compete on the
-                            global stage — one learner at a time.
-                        </p>
-
-                        <div class="mission-values">
-                            <div class="value-item">
-                                <span class="value-icon"></span>
-                                <div>
-                                    <h4>Focused Learning</h4>
-                                    <p>Curated, practical content tailored for Ghanaian learners.</p>
-                                </div>
-                            </div>
-                            <div class="value-item">
-                                <span class="value-icon"></span>
-                                <div>
-                                    <h4>Global Access</h4>
-                                    <p>Connect to world-class platforms and opportunities.</p>
-                                </div>
-                            </div>
-                            <div class="value-item">
-                                <span class="value-icon"></span>
-                                <div>
-                                    <h4>Community Support</h4>
-                                    <p>Grow together in a supportive learning community.</p>
-                                </div>
-                            </div>
-                            <div class="value-item">
-                                <span class="value-icon"></span>
-                                <div>
-                                    <h4>Free to Use</h4>
-                                    <p>All resources and guidance are completely free of charge.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="hero-image">
+                    <img src="images/hero.webp"
+                        alt="Young African professionals collaborating on technology projects in a modern workspace"
+                        width="600" height="400">
                 </div>
             </div>
         </section>
 
-        <!-- ===================== SKILL CATEGORIES ===================== -->
-        <section class="skills" id="skills" aria-labelledby="skills-heading">
+        <!-- Learning Paths Section -->
+        <section id="learning-paths" class="section learning-paths">
             <div class="container">
-                <span class="section-tag text-center" style="display:block; text-align:center;">What We Teach</span>
-                <h2 class="section-heading" id="skills-heading">Featured Technology Skills</h2>
-                <div class="divider"></div>
-                <p class="section-sub">
-                    Explore our four core skill categories designed to launch your technology career in Ghana and
-                    beyond.
-                </p>
+                <div class="section-header">
+                    <h2 class="section-title">Choose Your Learning Path</h2>
+                    <p class="section-description">Select a specialized track that aligns with your career goals and
+                        start your journey to becoming a tech professional.</p>
+                </div>
 
-                <div class="skills-grid">
-
-                    <!-- Web Development -->
-                    <article class="skill-card reveal" aria-label="Web Development skill category">
-                        <div class="skill-card-img">
-                            <img src="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Person coding web development on a laptop" width="400" height="190" loading="lazy">
-                            <span class="skill-card-badge">Most Popular</span>
-                            <span class="skill-card-icon" aria-hidden="true">🌐</span>
+                <div class="paths-grid">
+                    <article class="path-card">
+                        <div class="path-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
                         </div>
-                        <div class="skill-card-body">
-                            <h3>Web Development</h3>
-                            <p>
-                                Learn to build modern, responsive websites and web applications
-                                using HTML, CSS, JavaScript, and popular frameworks.
-                            </p>
-                            <a href="resources.html#web-dev" class="skill-card-link">
-                                Start Learning &#8594;
-                            </a>
-                        </div>
+                        <h3 class="path-title">Web Development</h3>
+                        <p class="path-description">Master HTML, CSS, JavaScript, and modern frameworks to build
+                            responsive websites and web applications.</p>
+                        <ul class="path-skills">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript & APIs</li>
+                            <li>Responsive Design</li>
+                            <li>Frontend Frameworks</li>
+                        </ul>
+                        <a href="#resources" class="path-link">Start Learning</a>
                     </article>
 
-                    <!-- Programming -->
-                    <article class="skill-card reveal" aria-label="Programming skill category">
-                        <div class="skill-card-img">
-                            <img src="https://images.pexels.com/photos/14553707/pexels-photo-14553707.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Colorful programming code displayed on a computer screen" width="400" height="190"
-                                loading="lazy">
-                            <span class="skill-card-badge">High Demand</span>
-                            <span class="skill-card-icon" aria-hidden="true">💻</span>
+                    <article class="path-card">
+                        <div class="path-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
                         </div>
-                        <div class="skill-card-body">
-                            <h3>Programming</h3>
-                            <p>
-                                Master popular programming languages like Python, JavaScript,
-                                Java, and more. Build real-world applications from day one.
-                            </p>
-                            <a href="resources.html#programming" class="skill-card-link">
-                                Start Learning &#8594;
-                            </a>
-                        </div>
+                        <h3 class="path-title">Programming</h3>
+                        <p class="path-description">Learn programming fundamentals and advanced concepts with Python,
+                            Java, C++, and other popular languages.</p>
+                        <ul class="path-skills">
+                            <li>Python Programming</li>
+                            <li>Object-Oriented Design</li>
+                            <li>Data Structures</li>
+                            <li>Algorithms</li>
+                        </ul>
+                        <a href="#resources" class="path-link">Start Learning</a>
                     </article>
 
-                    <!-- Cybersecurity -->
-                    <article class="skill-card reveal" aria-label="Cybersecurity skill category">
-                        <div class="skill-card-img">
-                            <img src="https://images.pexels.com/photos/5198392/pexels-photo-5198392.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Person interacting with digital code symbolizing cybersecurity" width="400"
-                                height="190" loading="lazy">
-                            <span class="skill-card-badge">Growing Field</span>
-                            <span class="skill-card-icon" aria-hidden="true">🔒</span>
+                    <article class="path-card">
+                        <div class="path-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
                         </div>
-                        <div class="skill-card-body">
-                            <h3>Cybersecurity</h3>
-                            <p>
-                                Protect digital assets and learn ethical hacking, network security,
-                                and data protection in today's connected world.
-                            </p>
-                            <a href="resources.html#cybersecurity" class="skill-card-link">
-                                Start Learning &#8594;
-                            </a>
-                        </div>
+                        <h3 class="path-title">Cybersecurity</h3>
+                        <p class="path-description">Protect digital assets and learn ethical hacking, network security,
+                            and information security best practices.</p>
+                        <ul class="path-skills">
+                            <li>Network Security</li>
+                            <li>Ethical Hacking</li>
+                            <li>Risk Management</li>
+                            <li>Security Tools</li>
+                        </ul>
+                        <a href="#resources" class="path-link">Start Learning</a>
                     </article>
 
-                    <!-- Digital Skills -->
-                    <article class="skill-card reveal" aria-label="Digital Skills category">
-                        <div class="skill-card-img">
-                            <img src="https://images.pexels.com/photos/33920053/pexels-photo-33920053.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Students collaborating on a technology project" width="400" height="190"
-                                loading="lazy">
-                            <span class="skill-card-badge">For Everyone</span>
-                            <span class="skill-card-icon" aria-hidden="true">📱</span>
+                    <article class="path-card">
+                        <div class="path-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
                         </div>
-                        <div class="skill-card-body">
-                            <h3>Digital Skills</h3>
-                            <p>
-                                From digital marketing to data literacy, gain the foundational
-                                digital skills that every professional needs in the modern economy.
-                            </p>
-                            <a href="resources.html#digital-skills" class="skill-card-link">
-                                Start Learning &#8594;
-                            </a>
-                        </div>
+                        <h3 class="path-title">Digital Skills</h3>
+                        <p class="path-description">Develop essential digital literacy, productivity tools, digital
+                            marketing, and cloud computing skills.</p>
+                        <ul class="path-skills">
+                            <li>Digital Literacy</li>
+                            <li>Cloud Computing</li>
+                            <li>Digital Marketing</li>
+                            <li>Productivity Tools</li>
+                        </ul>
+                        <a href="#resources" class="path-link">Start Learning</a>
                     </article>
-
                 </div>
             </div>
         </section>
 
-        <!-- ===================== CTA ===================== -->
-        <section class="cta-section" aria-labelledby="cta-heading">
+        <!-- Featured Resources Section -->
+        <section id="resources" class="section resources">
             <div class="container">
-                <div class="cta-inner reveal">
-                    <span class="section-tag" style="background:rgba(26,188,156,0.25); color:#7efde5;">
-                        Start Your Journey
-                    </span>
-                    <h2 id="cta-heading">Ready to Build Your Tech Career in Ghana?</h2>
-                    <p>
-                        Access hundreds of free learning resources, career guides, and
-                        internship opportunities — all curated specifically for Ghanaian
-                        students and young tech professionals.
-                    </p>
+                <div class="section-header">
+                    <h2 class="section-title">Featured Learning Resources</h2>
+                    <p class="section-description">Curated collection of free and premium courses, tutorials, and tools
+                        to accelerate your learning journey.</p>
+                </div>
+
+                <div class="resource-filters">
+                    <button class="filter-btn active" data-filter="all">All Resources</button>
+                    <button class="filter-btn" data-filter="courses">Courses</button>
+                    <button class="filter-btn" data-filter="tutorials">Tutorials</button>
+                    <button class="filter-btn" data-filter="tools">Tools</button>
+                    <button class="filter-btn" data-filter="books">Books</button>
+                </div>
+
+                <div class="resources-grid">
+                    <article class="resource-card" data-category="courses">
+                        <div class="resource-image">
+                            <img src="images/freecode.webp"
+                                alt="freeCodeCamp platform screenshot showing coding challenges" width="400"
+                                height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Free Course</span>
+                            <h3 class="resource-title">freeCodeCamp</h3>
+                            <p class="resource-description">Comprehensive full-stack web development curriculum with
+                                interactive coding challenges and certifications.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Web Development</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Certification</span>
+                            </div>
+                            <a href="https://www.freecodecamp.org" class="resource-link" target="_blank"
+                                rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-category="courses">
+                        <div class="resource-image">
+                            <img src="images/compscience.webp" alt="Harvard CS50 course interface" width="400"
+                                height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Free Course</span>
+                            <h3 class="resource-title">CS50: Introduction to Computer Science</h3>
+                            <p class="resource-description">Harvard University's renowned computer science course
+                                covering algorithms, data structures, and programming.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Programming</span>
+                                <span class="tag">Computer Science</span>
+                                <span class="tag">University</span>
+                            </div>
+                            <a href="https://cs50.harvard.edu" class="resource-link" target="_blank"
+                                rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-category="tutorials">
+                        <div class="resource-image">
+                            <img src="images/mdn.webp" alt="MDN Web Docs documentation homepage" width="400"
+                                height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Documentation</span>
+                            <h3 class="resource-title">MDN Web Docs</h3>
+                            <p class="resource-description">The most comprehensive web development documentation
+                                covering HTML, CSS, JavaScript, and web APIs.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Web Development</span>
+                                <span class="tag">Documentation</span>
+                                <span class="tag">Reference</span>
+                            </div>
+                            <a href="https://developer.mozilla.org" class="resource-link" target="_blank"
+                                rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-category="tools">
+                        <div class="resource-image">
+                            <img src="images/github.webp" alt="GitHub platform showing code repositories"
+                                width="400" height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Platform</span>
+                            <h3 class="resource-title">GitHub</h3>
+                            <p class="resource-description">Version control and collaboration platform essential for
+                                every developer's workflow and portfolio.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Version Control</span>
+                                <span class="tag">Collaboration</span>
+                                <span class="tag">Portfolio</span>
+                            </div>
+                            <a href="https://github.com" class="resource-link" target="_blank"
+                                rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-category="courses">
+                        <div class="resource-image">
+                            <img src="images/python.webp" alt="Python programming tutorial interface"
+                                width="400" height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Free Course</span>
+                            <h3 class="resource-title">Python for Everybody</h3>
+                            <p class="resource-description">Learn Python programming from basics to advanced data
+                                structures and database integration.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Programming</span>
+                                <span class="tag">Data Science</span>
+                            </div>
+                            <a href="https://www.py4e.com" class="resource-link" target="_blank"
+                                rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-category="books">
+                        <div class="resource-image">
+                            <img src="images/javascript.webp" alt="Eloquent JavaScript book cover" width="400"
+                                height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Free Book</span>
+                            <h3 class="resource-title">Eloquent JavaScript</h3>
+                            <p class="resource-description">A modern introduction to programming with JavaScript,
+                                covering fundamentals and advanced topics.</p>
+                            <div class="resource-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Book</span>
+                                <span class="tag">Programming</span>
+                            </div>
+                            <a href="https://eloquentjavascript.net" class="resource-link" target="_blank"
+                                rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Opportunities Section -->
+        <section id="opportunities" class="section opportunities">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Career Opportunities</h2>
+                    <p class="section-description">Explore career pathways, job opportunities, and internships in
+                        Ghana's growing technology sector.</p>
+                </div>
+
+                <div class="opportunities-grid">
+                    <article class="opportunity-card">
+                        <div class="opportunity-header">
+                            <h3 class="opportunity-title">Junior Web Developer</h3>
+                            <span class="opportunity-type">Full-time</span>
+                        </div>
+                        <p class="opportunity-company">Tech Company Ghana</p>
+                        <p class="opportunity-location">Accra, Ghana</p>
+                        <p class="opportunity-description">Looking for passionate junior developers with HTML, CSS, and
+                            JavaScript skills to join our growing team.</p>
+                        <div class="opportunity-skills">
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                        <a href="#contact" class="opportunity-link">Learn More</a>
+                    </article>
+
+                    <article class="opportunity-card">
+                        <div class="opportunity-header">
+                            <h3 class="opportunity-title">Python Developer Internship</h3>
+                            <span class="opportunity-type">Internship</span>
+                        </div>
+                        <p class="opportunity-company">FinTech Solutions GH</p>
+                        <p class="opportunity-location">Kumasi, Ghana</p>
+                        <p class="opportunity-description">3-month paid internship for students or graduates with Python
+                            programming knowledge and interest in finance.</p>
+                        <div class="opportunity-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">APIs</span>
+                            <span class="skill-tag">Data Analysis</span>
+                        </div>
+                        <a href="#contact" class="opportunity-link">Learn More</a>
+                    </article>
+
+                    <article class="opportunity-card">
+                        <div class="opportunity-header">
+                            <h3 class="opportunity-title">Cybersecurity Analyst</h3>
+                            <span class="opportunity-type">Full-time</span>
+                        </div>
+                        <p class="opportunity-company">SecureNet Ghana</p>
+                        <p class="opportunity-location">Accra, Ghana</p>
+                        <p class="opportunity-description">Protect our clients' digital assets. Looking for
+                            security-minded professionals with networking knowledge.</p>
+                        <div class="opportunity-skills">
+                            <span class="skill-tag">Network Security</span>
+                            <span class="skill-tag">Penetration Testing</span>
+                            <span class="skill-tag">Security Tools</span>
+                        </div>
+                        <a href="#contact" class="opportunity-link">Learn More</a>
+                    </article>
+
+                    <article class="opportunity-card">
+                        <div class="opportunity-header">
+                            <h3 class="opportunity-title">Digital Marketing Specialist</h3>
+                            <span class="opportunity-type">Contract</span>
+                        </div>
+                        <p class="opportunity-company">Marketing Hub GH</p>
+                        <p class="opportunity-location">Remote</p>
+                        <p class="opportunity-description">Help businesses grow online with SEO, social media marketing,
+                            and digital advertising campaigns.</p>
+                        <div class="opportunity-skills">
+                            <span class="skill-tag">SEO</span>
+                            <span class="skill-tag">Social Media</span>
+                            <span class="skill-tag">Analytics</span>
+                        </div>
+                        <a href="#contact" class="opportunity-link">Learn More</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Pathway Section -->
+        <section class="section success-pathway">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Your Path to Success</h2>
+                    <p class="section-description">Follow our proven roadmap from beginner to job-ready tech
+                        professional.</p>
+                </div>
+
+                <div class="pathway-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Choose Your Path</h3>
+                            <p class="step-description">Select a learning track that matches your interests and career
+                                goals.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Learn Fundamentals</h3>
+                            <p class="step-description">Master the core concepts through structured courses and hands-on
+                                practice.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Build Projects</h3>
+                            <p class="step-description">Create portfolio projects that demonstrate your skills to
+                                potential employers.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Get Certified</h3>
+                            <p class="step-description">Earn recognized certifications to validate your knowledge and
+                                expertise.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Land Your Job</h3>
+                            <p class="step-description">Apply for opportunities and launch your successful tech career
+                                in Ghana.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Success Stories</h2>
+                    <p class="section-description">Hear from students and professionals who transformed their careers
+                        through Tech Skills Hub Ghana.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            <p>"Tech Skills Hub Ghana changed my life. I went from knowing nothing about coding to
+                                landing my first web developer job in just 8 months. The resources are incredible!"</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/kwame.webp" alt="Portrait of Kwame Mensah" class="author-image"
+                                width="60" height="60">
+                            <div class="author-info">
+                                <p class="author-name">Kwame Mensah</p>
+                                <p class="author-role">Web Developer, Tech Solutions GH</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            <p>"As a recent graduate, I was struggling to find direction. This platform gave me clear
+                                learning paths and connected me with amazing opportunities in cybersecurity."</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/ama.webp" alt="Portrait of Ama Osei" class="author-image"
+                                width="60" height="60">
+                            <div class="author-info">
+                                <p class="author-name">Ama Osei</p>
+                                <p class="author-role">Security Analyst, SecureNet Ghana</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            <p>"The Python resources helped me transition from teaching to software development. Now I'm
+                                building apps that make a real difference in my community."</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/yaw.webp" alt="Portrait of Yaw Boateng" class="author-image"
+                                width="60" height="60">
+                            <div class="author-info">
+                                <p class="author-name">Yaw Boateng</p>
+                                <p class="author-role">Software Developer, EduTech Ghana</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About Tech Skills Hub Ghana</h2>
+                        <p>Tech Skills Hub Ghana is dedicated to empowering the next generation of technology
+                            professionals in Ghana. We believe that quality technology education should be accessible to
+                            everyone, regardless of their background or financial situation.</p>
+                        <p>Our mission is to provide curated, world-class learning resources, career guidance, and real
+                            opportunities that help students, graduates, and professionals build successful careers in
+                            web development, programming, cybersecurity, and digital skills.</p>
+                        <p>We partner with leading educational platforms, local tech companies, and industry experts to
+                            ensure our community has access to the best resources and opportunities in Ghana's rapidly
+                            growing technology sector.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-label">Active Learners</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">Learning Resources</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Career Placements</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Partner Companies</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Start Your Tech Journey?</h2>
+                    <p class="cta-description">Join thousands of Ghanaian students and professionals who are building
+                        successful tech careers. Start learning today!</p>
                     <div class="cta-actions">
-                        <a href="resources.html" class="btn btn-primary">
-                            Browse Learning Resources
-                        </a>
-                        <a href="careers.html" class="btn btn-outline">
-                            Explore Career Paths
-                        </a>
+                        <a href="#learning-paths" class="btn btn-primary btn-large">Get Started Now</a>
+                        <a href="#contact" class="btn btn-secondary btn-large">Contact Us</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===================== WHY US (bonus) ===================== -->
-        <section style="padding: 5rem 0; background: var(--white);" aria-labelledby="why-heading">
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
             <div class="container">
-                <span class="section-tag text-center" style="display:block; text-align:center;">Why Choose Us</span>
-                <h2 class="section-heading" id="why-heading">Everything You Need to Succeed</h2>
-                <div class="divider"></div>
-                <p class="section-sub">
-                    We've built Tech Skills Hub Ghana with one goal: to make tech education
-                    accessible, practical, and career-focused for every Ghanaian learner.
-                </p>
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-description">Have questions or need guidance? We're here to help you succeed.</p>
+                </div>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
-
-                    <div class="reveal"
-                        style="background: var(--light-gray); border-radius: 12px; padding: 2rem 1.5rem; text-align: center;">
-                        <div style="font-size: 2.6rem; margin-bottom: 0.75rem;"></div>
-                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Beginner Friendly</h3>
-                        <p style="font-size: 0.87rem; color: var(--text-light);">Start from zero and progress at your
-                            own pace with structured learning paths.</p>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div>
+                                <p class="info-label">Address</p>
+                                <p>Accra, Ghana</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div>
+                                <p class="info-label">Email</p>
+                                <p>info@techskillshubghana.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <div>
+                                <p class="info-label">Phone</p>
+                                <p>+233 50 504 1132</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="reveal"
-                        style="background: var(--light-gray); border-radius: 12px; padding: 2rem 1.5rem; text-align: center;">
-                        <div style="font-size: 2.6rem; margin-bottom: 0.75rem;"></div>
-                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Mobile Optimised</h3>
-                        <p style="font-size: 0.87rem; color: var(--text-light);">Access all resources on your
-                            smartphone, tablet, or computer — anytime, anywhere.</p>
-                    </div>
-
-                    <div class="reveal"
-                        style="background: var(--light-gray); border-radius: 12px; padding: 2rem 1.5rem; text-align: center;">
-                        <div style="font-size: 2.6rem; margin-bottom: 0.75rem;"></div>
-                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Industry Relevant</h3>
-                        <p style="font-size: 0.87rem; color: var(--text-light);">Curated resources aligned with what
-                            Ghana's tech employers are actually looking for.</p>
-                    </div>
-
-                    <div class="reveal"
-                        style="background: var(--light-gray); border-radius: 12px; padding: 2rem 1.5rem; text-align: center;">
-                        <div style="font-size: 2.6rem; margin-bottom: 0.75rem;"></div>
-                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Career Connected</h3>
-                        <p style="font-size: 0.87rem; color: var(--text-light);">Link skills directly to internship and
-                            job opportunities in Ghana's growing tech sector.</p>
-                    </div>
-
-                    <div class="reveal"
-                        style="background: var(--light-gray); border-radius: 12px; padding: 2rem 1.5rem; text-align: center;">
-                        <div style="font-size: 2.6rem; margin-bottom: 0.75rem;"></div>
-                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Community Driven</h3>
-                        <p style="font-size: 0.87rem; color: var(--text-light);">Join a growing network of Ghanaian tech
-                            learners, mentors, and professionals.</p>
-                    </div>
-
-                    <div class="reveal"
-                        style="background: var(--light-gray); border-radius: 12px; padding: 2rem 1.5rem; text-align: center;">
-                        <div style="font-size: 2.6rem; margin-bottom: 0.75rem;"></div>
-                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Always Free</h3>
-                        <p style="font-size: 0.87rem; color: var(--text-light);">No subscriptions, no paywalls. Quality
-                            tech education is a right, not a privilege.</p>
-                    </div>
-
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="site-footer" role="contentinfo">
+    <!-- Footer -->
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-grid">
-
-                <!-- Brand -->
-                <div class="footer-brand">
-                    <a href="index.html" class="nav-logo">
-                        <span class="logo-icon" aria-hidden="true">
-                            <img src="images/logo.webp" alt="Tech Skills Hub Ghana Logo" width="50" height="50">
-                        </span>
-
-                    </a>
-                    <p>
-                        Empowering students and young professionals across Ghana with the
-                        digital skills and career guidance needed to succeed in the global
-                        technology industry.
-                    </p>
-                    <div class="footer-social" aria-label="Social media links">
-                        <a href="#" class="social-btn" aria-label="Follow us on Twitter">&#120143;</a>
-                        <a href="#" class="social-btn" aria-label="Follow us on LinkedIn">in</a>
-                        <a href="#" class="social-btn" aria-label="Follow us on Facebook">f</a>
-                        <a href="#" class="social-btn" aria-label="Follow us on Instagram">&#9728;</a>
-                        <a href="#" class="social-btn" aria-label="Subscribe on YouTube">&#9654;</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Tech Skills Hub Ghana</h3>
+                    <p class="footer-description">Empowering the next generation of technology professionals in Ghana
+                        through quality education, resources, and opportunities.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" class="social-link" aria-label="Follow us on Facebook"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" class="social-link" aria-label="Follow us on Twitter"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com" class="social-link" aria-label="Follow us on LinkedIn"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://github.com" class="social-link" aria-label="Follow us on GitHub"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                                </path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Learning Paths</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="resources.html">Learning Resources</a></li>
-                        <li><a href="careers.html">Career Opportunities</a></li>
-                        <li><a href="careers.html#inquiry">Contact Us</a></li>
+                        <li><a href="#learning-paths">Web Development</a></li>
+                        <li><a href="#learning-paths">Programming</a></li>
+                        <li><a href="#learning-paths">Cybersecurity</a></li>
+                        <li><a href="#learning-paths">Digital Skills</a></li>
                     </ul>
                 </div>
 
-                <!-- Skill Areas -->
-                <div class="footer-col">
-                    <h4>Skill Areas</h4>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="resources.html#web-dev">Web Development</a></li>
-                        <li><a href="resources.html#programming">Programming</a></li>
-                        <li><a href="resources.html#cybersecurity">Cybersecurity</a></li>
-                        <li><a href="resources.html#digital-skills">Digital Skills</a></li>
-                        <li><a href="resources.html">Free Platforms</a></li>
+                        <li><a href="#resources">Free Courses</a></li>
+                        <li><a href="#resources">Tutorials</a></li>
+                        <li><a href="#resources">Tools</a></li>
+                        <li><a href="#resources">Books</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <span class="contact-icon" aria-hidden="true"></span>
-                            <span>Accra Digital Centre, Airport City, Accra, Ghana</span>
-                        </li>
-                        <li>
-                            <span class="contact-icon" aria-hidden="true"></span>
-                            <span>info@techskillshubghana.org</span>
-                        </li>
-                        <li>
-                            <span class="contact-icon" aria-hidden="true"></span>
-                            <span>+233 (0) 50 504 1132</span>
-                        </li>
-                        <li>
-                            <span class="contact-icon" aria-hidden="true"></span>
-                            <span>Mon – Fri, 8:00 AM – 6:00 PM GMT</span>
-                        </li>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#opportunities">Opportunities</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact">Privacy Policy</a></li>
                     </ul>
                 </div>
-
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Tech Skills Hub Ghana. All rights reserved.</p>
-                <p>Built By Godfred Osei &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of
-                        Use</a></p>
+                <p>&copy; <span id="currentYear"></span> Tech Skills Hub Ghana. All rights reserved. Empowering Ghana's
+                    tech future.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top -->
-    <button class="back-to-top" aria-label="Back to top">&#8679;</button>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
 
-    
 </body>
 
 </html>

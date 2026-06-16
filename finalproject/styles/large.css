@@ -1,152 +1,456 @@
-/* ============================================================
-   Tech Skills Hub Ghana — large.css
-   Tablet (> 640px) and Desktop (> 900px) overrides
-   Import AFTER small.css
-   ============================================================ */
+/* ===================================
+   Tech Skills Hub Ghana - Large Screen CSS
+   WDD 231 Final Project
+   Tablet & Desktop Styles
+   =================================== */
 
-/* ============================================================
-   TABLET — min-width: 641px
-   ============================================================ */
-@media (min-width: 641px) {
+/* ===================================
+   Medium Screens (Tablets) - 600px+
+   =================================== */
 
-    /* Navbar — hide hamburger, show horizontal menu */
+@media (min-width: 600px) {
+    /* Typography */
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-description {
+        font-size: 18px;
+    }
+
+    /* Navigation */
+    .logo-text {
+        display: inline;
+    }
+
+    /* Hero Section */
+    .hero-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Learning Paths */
+    .paths-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Resources */
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Opportunities */
+    .opportunities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About Stats */
+    .about-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* What We Offer */
+    .offer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Our Values */
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA Actions */
+    .cta-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Contact */
+    .contact-wrapper {
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}
+
+/* ===================================
+   Large Screens (Desktop) - 1024px+
+   =================================== */
+
+@media (min-width: 1024px) {
+    /* Container */
+    .container {
+        padding: 0 40px;
+    }
+
+    /* Typography */
+    .hero-title {
+        font-size: 52px;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .section-description {
+        font-size: 18px;
+    }
+
+    .cta-title {
+        font-size: 36px;
+    }
+
+    .cta-description {
+        font-size: 18px;
+    }
+
+    .page-title {
+        font-size: 48px;
+    }
+
+    .page-subtitle {
+        font-size: 20px;
+    }
+
+    /* Section Spacing */
+    .section {
+        padding: 80px 0;
+    }
+
+    .hero {
+        padding: 100px 0;
+    }
+
+    .page-hero {
+        padding: 80px 0 60px;
+    }
+
+    /* Header & Navigation */
     .nav-toggle {
         display: none;
     }
 
     .nav-menu {
+        position: static;
         display: flex;
+        max-height: none;
+        box-shadow: none;
+        background-color: transparent;
+        gap: 8px;
+    }
+
+    .nav-menu li {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+
+    .nav-link.active {
+        border-left: none;
+    }
+
+    /* Hero Section */
+    .hero .container {
         flex-direction: row;
         align-items: center;
-        position: static;
-        background: transparent;
-        padding: 0;
-        border-top: none;
-        gap: 0.25rem;
-        box-shadow: none;
+        gap: 60px;
     }
 
-    .nav-menu a {
-        padding: 0.45em 0.9em;
-    }
-
-    /* Hero — row actions & wider stats gap */
     .hero-content {
-        padding: 5rem 0 4rem;
+        flex: 1;
+        text-align: left;
     }
 
     .hero-actions {
+        justify-content: flex-start;
+    }
+
+    .hero-image {
+        flex: 1;
+    }
+
+    /* Learning Paths */
+    .paths-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .path-card {
+        padding: 32px 28px;
+    }
+
+    /* Resources */
+    .resources-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .resource-image {
+        height: 220px;
+    }
+
+    /* Opportunities */
+    .opportunities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    /* What We Offer */
+    .offer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Our Values */
+    .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Story Content */
+    .story-content p {
+        font-size: 17px;
+    }
+
+    /* Success Pathway */
+    .pathway-steps {
         flex-direction: row;
-        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
-    .hero-stats {
-        gap: 2rem;
+    .step {
+        flex-direction: column;
+        flex: 1;
+        text-align: center;
+        align-items: center;
     }
 
-    /* Mission values — 2 columns */
-    .mission-values {
-        grid-template-columns: 1fr 1fr;
+    .step-number {
+        width: 64px;
+        height: 64px;
+        font-size: 24px;
+        margin-bottom: 16px;
     }
 
-    /* Skills grid — auto-fit */
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
     }
 
-    /* Resources — auto-fill */
-    .resource-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* About Section */
+    .about-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
     }
 
-    /* Languages — auto-fill */
-    .lang-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    .about-text {
+        flex: 1.5;
     }
 
-    /* Platforms — auto-fill */
-    .platform-list {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    .about-stats {
+        flex: 1;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Career paths — auto-fill */
-    .path-grid {
-        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    /* Cards Hover Effects */
+    .path-card:hover {
+        transform: translateY(-8px);
     }
 
-    /* Opportunities — auto-fill */
-    .opp-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    .resource-card:hover {
+        transform: translateY(-8px);
     }
 
-    /* Tips — auto-fill */
-    .tips-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .opportunity-card:hover {
+        transform: translateY(-8px);
     }
-
-    /* Form row — 2 columns */
-    .form-row {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* Dev recommendations — auto-fill */
-    .rec-grid {
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    }
-
-    /* Footer — 2 columns on tablet */
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* Mission image — restore height */
-    .mission-img-wrap {
-        max-height: none;
-    }
-
-    .mission-img-wrap img {
-        height: 300px;
-    }
-
 }
 
-/* ============================================================
-   DESKTOP — min-width: 901px
-   ============================================================ */
-@media (min-width: 901px) {
+/* ===================================
+   Extra Large Screens - 1280px+
+   =================================== */
 
-    /* Mission — 2-column side-by-side layout */
-    .mission-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
+@media (min-width: 1280px) {
+    /* Container */
+    .container {
+        max-width: 1280px;
     }
 
-    .mission-img-wrap img {
-        height: 380px;
+    /* Typography */
+    .hero-title {
+        font-size: 56px;
     }
 
-    /* Hero visual card — visible on large screens */
-    .hero-visual {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 42%;
-        max-width: 480px;
-        z-index: 2;
+    .section-title {
+        font-size: 40px;
     }
 
-    /* Footer — 4-column layout */
-    .footer-grid {
-        grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
-        gap: 2.5rem;
+    /* Section Spacing */
+    .section {
+        padding: 100px 0;
     }
 
-    /* Contact — 2-column layout */
-    .contact-wrapper {
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
+    .hero {
+        padding: 120px 0;
     }
 
+    /* Hero */
+    .hero .container {
+        gap: 80px;
+    }
+
+    /* Resources */
+    .resources-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Opportunities */
+    .opportunities-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===================================
+   Print Styles
+   =================================== */
+
+@media print {
+    .site-header,
+    .nav-toggle,
+    .hero-actions,
+    .filter-btn,
+    .back-to-top,
+    .contact-form,
+    .cta,
+    .site-footer {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000000;
+    }
+
+    .section {
+        page-break-inside: avoid;
+        padding: 20pt 0;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #000000;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+    }
+}
+
+/* ===================================
+   Reduced Motion
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===================================
+   High Contrast Mode
+   =================================== */
+
+@media (prefers-contrast: high) {
+    .btn-primary,
+    .btn-secondary {
+        border: 2px solid currentColor;
+    }
+
+    .path-card,
+    .resource-card,
+    .opportunity-card,
+    .testimonial-card {
+        border: 2px solid #111827;
+    }
+}
+
+/* ===================================
+   Dark Mode Support (Optional)
+   =================================== */
+
+@media (prefers-color-scheme: dark) {
+    /* This is optional - remove if not needed */
+    /* Uncomment to enable dark mode support */
+    
+    /*
+    body {
+        background-color: #111827;
+        color: #F4F4F4;
+    }
+
+    .site-header {
+        background-color: #1F2937;
+    }
+
+    .path-card,
+    .resource-card,
+    .opportunity-card,
+    .testimonial-card,
+    .contact-form {
+        background-color: #1F2937;
+        color: #F4F4F4;
+    }
+
+    .section-title,
+    .path-title,
+    .resource-title,
+    .opportunity-title,
+    .step-title,
+    .author-name {
+        color: #F4F4F4;
+    }
+
+    .learning-paths,
+    .opportunities,
+    .testimonials,
+    .contact {
+        background-color: #0F172A;
+    }
+    */
 }

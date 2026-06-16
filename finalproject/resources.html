@@ -1,771 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Tech Skills Hub Ghana – empowering students and young professionals with technology skills and career guidance in Ghana.">
-    <meta name="author" content="Godfred Osei">
-
-    <link rel="icon" href="images/favicon.ico">
-
-    <title>Tech Skills Hub Ghana | Home</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:wght@700&display=swap"
-        rel="stylesheet">
-
-    <!-- Stylesheet -->
+    <title>Learning Resources | Tech Skills Hub Ghana</title>
+    <meta name="description" content="Browse our comprehensive collection of free coding courses, tutorials, tools, and books to accelerate your tech learning journey in Ghana.">
+    <meta name="keywords" content="Tech Resources Ghana, Free Coding Courses, Programming Tutorials, Web Development Tools, Tech Books Ghana">
+    <meta name="author" content="Tech Skills Hub Ghana">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Learning Resources | Tech Skills Hub Ghana">
+    <meta property="og:description" content="Comprehensive collection of free coding courses, tutorials, and tools for Ghanaian tech learners.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oseigodfred.github.io/wdd231/finalproject/index.html/resources.html">
+    <meta property="og:image" content="https://oseigodfred.github.io/wdd231/finalproject/images/og_image.webp">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Learning Resources | Tech Skills Hub Ghana">
+    <meta name="twitter:description" content="Comprehensive collection of free coding courses, tutorials, and tools for Ghanaian tech learners.">
+    <meta name="twitter:image" content="https://oseigodfred.github.io/wdd231/finalproject/images/og_image.webp">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
-
-    <meta property="og:title" content="Tech Skills Hub Ghana | Home">
-    <meta property="og:description"
-        content="Empowering students and young professionals with technology skills and career guidance in Ghana.">
-    <meta property="og:image" content="https://oseigodfred.github.io/wdd231/finalproject/images/logo.webp">
-    <meta property="og:url" content="https://oseigodfred.github.io/wdd231/finalproject/">
-
-    <script src="scripts/main.js" defer></script>
 </head>
-
 <body>
-
-    <!-- ===================== HEADER ===================== -->
-    <header class="site-header" role="banner">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header and Navigation -->
+    <header class="site-header">
         <div class="container">
-            <nav class="nav-inner" aria-label="Main navigation">
-                <a href="index.html" class="nav-logo" aria-label="Tech Skills Hub Ghana – Home">
-                    <span class="logo-icon" aria-hidden="true">
-                        <img src="images/logo.webp" alt="Tech Skills Hub Ghana Logo" width="50" height="50">
-                    </span>
-
-                </a>
-
-                <ul class="nav-menu" role="list" id="navMenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resources.html" aria-current="page">Learning Resources</a></li>
-                    <li><a href="careers.html">Career Opportunities</a></li>
-                    <li><a href="careers.html#inquiry" class="nav-cta">Get Started</a></li>
-                </ul>
-
-                <button class="nav-toggle" aria-controls="navMenu" aria-expanded="false"
-                    aria-label="Toggle navigation menu">
-                    <span></span><span></span><span></span>
+            <nav class="main-nav" aria-label="Main navigation">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">TSH</span>
+                        <span class="logo-text">Tech Skills Hub Ghana</span>
+                    </a>
+                </div>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
                 </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="resources.html" class="nav-link active">Resources</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-
-        <!-- ===================== PAGE BANNER ===================== -->
-        <section class="page-banner" aria-label="Page banner">
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Hero -->
+        <section class="page-hero">
             <div class="container">
-                <div class="page-banner-inner">
-                    <nav class="breadcrumb" aria-label="Breadcrumb">
-                        <a href="index.html">Home</a>
-                        <span aria-hidden="true">›</span>
-                        <span aria-current="page">Learning Resources</span>
-                    </nav>
-                    <h1>Learning Resources</h1>
-                    <p class="lead">
-                        Discover curated, free resources across web development, programming,
-                        cybersecurity, and digital skills to jumpstart your tech journey.
-                    </p>
-                </div>
+                <h1 class="page-title">Learning Resources</h1>
+                <p class="page-subtitle">Comprehensive collection of free courses, tutorials, tools, and books to accelerate your technology learning journey in Ghana.</p>
             </div>
         </section>
 
-        <!-- ===================== PROGRAMMING LANGUAGES ===================== -->
-        <section class="resources-section" id="programming" aria-labelledby="prog-heading">
-            <div class="container anchor-offset">
-                <span class="section-tag">Core Skills</span>
-                <h2 id="prog-heading" class="section-heading" style="text-align:left; margin-bottom:0.5rem;">
-                    Popular Programming Languages
-                </h2>
-                <div class="divider" style="margin:0.6rem 0 1rem;"></div>
-                <p class="section-sub" style="text-align:left; margin-inline: 0; margin-bottom:2rem;">
-                    Choose a language, start small, and build real projects. Here are the top programming languages for
-                    Ghanaian developers to learn in 2026.
-                </p>
-
-                <div class="lang-grid">
-
-                    <div class="lang-card reveal">
-                        <div class="lang-icon"></div>
-                        <h3>Python</h3>
-                        <p>Beginner-friendly and incredibly versatile. Used in AI, data science, web backends, and
-                            automation.</p>
-                        <span class="lang-level level-beginner">Beginner Friendly</span>
-                    </div>
-
-                    <div class="lang-card reveal">
-                        <div class="lang-icon"></div>
-                        <h3>JavaScript</h3>
-                        <p>The language of the web. Build dynamic websites, mobile apps, and server-side applications.
-                        </p>
-                        <span class="lang-level level-beginner">Beginner Friendly</span>
-                    </div>
-
-                    <div class="lang-card reveal">
-                        <div class="lang-icon"></div>
-                        <h3>Java</h3>
-                        <p>Widely used in enterprise software, Android development, and financial tech applications.</p>
-                        <span class="lang-level level-intermediate">Intermediate</span>
-                    </div>
-
-                    <div class="lang-card reveal">
-                        <div class="lang-icon"></div>
-                        <h3>Rust</h3>
-                        <p>Blazing-fast systems programming language with memory safety. Gaining rapid industry
-                            adoption.</p>
-                        <span class="lang-level level-advanced">Advanced</span>
-                    </div>
-
-                    <div class="lang-card reveal">
-                        <div class="lang-icon"></div>
-                        <h3>PHP</h3>
-                        <p>Powers over 70% of the web. Essential for WordPress, content management, and web backends.
-                        </p>
-                        <span class="lang-level level-beginner">Beginner Friendly</span>
-                    </div>
-
-                    <div class="lang-card reveal">
-                        <div class="lang-icon"></div>
-                        <h3>Swift Kotlin</h3>
-                        <p>Modern languages for iOS and Android mobile app development. High-demand in Ghana's mobile
-                            market.</p>
-                        <span class="lang-level level-intermediate">Intermediate</span>
-                    </div>
-
-                    <div class="lang-card reveal">
-                        <div class="lang-icon"></div>
-                        <h3>C C++</h3>
-                        <p>Foundational languages that teach deep programming concepts. Used in embedded systems and
-                            software.</p>
-                        <span class="lang-level level-intermediate">Intermediate</span>
-                    </div>
-
-                    <div class="lang-card reveal">
-                        <div class="lang-icon"></div>
-                        <h3>TypeScript</h3>
-                        <p>Typed superset of JavaScript. Preferred for large-scale web applications and modern teams.
-                        </p>
-                        <span class="lang-level level-intermediate">Intermediate</span>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================== WEB DEVELOPMENT ===================== -->
-        <section class="resources-section" id="web-dev" style="background: var(--white);"
-            aria-labelledby="webdev-heading">
-            <div class="container anchor-offset">
-                <span class="section-tag">Build the Web</span>
-                <h2 id="webdev-heading" class="section-heading" style="text-align:left; margin-bottom:0.5rem;">
-                    Web Development Resources
-                </h2>
-                <div class="divider" style="margin:0.6rem 0 1rem;"></div>
-                <p style="max-width:640px; margin-bottom:2.2rem; font-size:0.97rem; color:var(--text-light);">
-                    From beginner tutorials to advanced frameworks — everything you need to build modern websites and
-                    web applications.
-                </p>
-
-                <div class="resource-grid">
-
-                    <article class="resource-card reveal" data-category="web">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/256502/pexels-photo-256502.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Colorful CSS code lines on a computer screen for web development" width="400"
-                                height="175" loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">HTML & CSS</span>
-                            <h3>HTML & CSS Fundamentals</h3>
-                            <p>The foundation of every website. Learn to structure content and style stunning layouts
-                                from scratch.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank"
-                                    rel="noopener noreferrer" class="btn btn-outline-dark"
-                                    style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal" data-category="web">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/14553720/pexels-photo-14553720.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="HTML and CSS code displayed on a computer screen" width="400" height="175"
-                                loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">JavaScript</span>
-                            <h3>JavaScript for Beginners</h3>
-                            <p>Make your websites interactive. Learn variables, functions, DOM manipulation, and modern
-                                ES6+ syntax.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://javascript.info" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-outline-dark" style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal" data-category="web">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Person coding on a laptop showing HTML code" width="400" height="175"
-                                loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">Frameworks</span>
-                            <h3>React & Vue.js Crash Course</h3>
-                            <p>Build dynamic, component-based user interfaces using the most popular JavaScript
-                                frameworks in the industry.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://react.dev" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-outline-dark" style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal" data-category="web">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/33920035/pexels-photo-33920035.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Students collaborating on a technology project" width="400" height="175"
-                                loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">Backend</span>
-                            <h3>Node.js & Express Backend</h3>
-                            <p>Move to the server side. Build APIs, handle databases, and create full-stack web
-                                applications.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://nodejs.org/en/learn" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-outline-dark" style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal" data-category="web">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/14553704/pexels-photo-14553704.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="HTML code close-up on screen" width="400" height="175" loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">Responsive Design</span>
-                            <h3>Responsive Web Design</h3>
-                            <p>Build websites that look great on any screen — mobile phones, tablets, and desktops —
-                                using flexbox and grid.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank"
-                                    rel="noopener noreferrer" class="btn btn-outline-dark"
-                                    style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal" data-category="web">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/34804024/pexels-photo-34804024.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Computer screen with glowing code" width="400" height="175" loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">Databases</span>
-                            <h3>SQL & Database Design</h3>
-                            <p>Learn to design and query relational databases using MySQL and PostgreSQL for web and
-                                business applications.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://www.w3schools.com/sql/" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-outline-dark" style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================== CYBERSECURITY ===================== -->
-        <section class="resources-section" id="cybersecurity" aria-labelledby="cyber-heading"
-            style="background:var(--light-gray);">
-            <div class="container anchor-offset">
-                <span class="section-tag">Stay Secure</span>
-                <h2 id="cyber-heading" class="section-heading" style="text-align:left; margin-bottom:0.5rem;">
-                    Cybersecurity Resources
-                </h2>
-                <div class="divider" style="margin:0.6rem 0 1rem;"></div>
-                <p style="max-width:640px; margin-bottom:2.2rem; font-size:0.97rem; color:var(--text-light);">
-                    Cybersecurity is one of the fastest-growing and highest-paying fields in tech. Start protecting
-                    digital infrastructure today.
-                </p>
-
-                <div class="resource-grid">
-
-                    <article class="resource-card reveal" data-category="cyber">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/5935794/pexels-photo-5935794.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Person typing on laptop showing cybersecurity theme" width="400" height="175"
-                                loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">Foundations</span>
-                            <h3>Cybersecurity Fundamentals</h3>
-                            <p>Understand core concepts like CIA triad, threats, vulnerabilities, and security best
-                                practices for networks.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://www.coursera.org/learn/cybersecurity-fundamentals" target="_blank"
-                                    rel="noopener noreferrer" class="btn btn-outline-dark"
-                                    style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal" data-category="cyber">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/37787963/pexels-photo-37787963.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Matrix-style green code on a laptop keyboard" width="400" height="175"
-                                loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">Ethical Hacking</span>
-                            <h3>Ethical Hacking &amp; Penetration Testing</h3>
-                            <p>Learn how to legally test systems for vulnerabilities using tools like Kali Linux,
-                                Metasploit, and Burp Suite.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-outline-dark" style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal" data-category="cyber">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/37755432/pexels-photo-37755432.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Laptop screen with green security code" width="400" height="175" loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">Network Security</span>
-                            <h3>Network Security Essentials</h3>
-                            <p>Protect networks from intrusions, analyse traffic, and understand firewalls, VPNs, and
-                                intrusion detection systems.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://www.cybrary.it" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-outline-dark" style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal" data-category="cyber">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/5198392/pexels-photo-5198392.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Person between screens symbolizing cybersecurity" width="400" height="175"
-                                loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">Certification Prep</span>
-                            <h3>CompTIA Security+ Prep</h3>
-                            <p>Industry-recognised certification covering network threats, cryptography, identity
-                                management, and more.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/"
-                                    target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark"
-                                    style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================== DIGITAL SKILLS ===================== -->
-        <section class="resources-section" id="digital-skills" style="background:var(--white);"
-            aria-labelledby="digital-heading">
-            <div class="container anchor-offset">
-                <span class="section-tag">Digital Literacy</span>
-                <h2 id="digital-heading" class="section-heading" style="text-align:left; margin-bottom:0.5rem;">
-                    Digital Skills for Everyone
-                </h2>
-                <div class="divider" style="margin:0.6rem 0 1rem;"></div>
-                <p style="max-width:640px; margin-bottom:2.2rem; font-size:0.97rem; color:var(--text-light);">
-                    Digital skills are the foundation of the modern economy. Whether you're a student, entrepreneur, or
-                    professional, these skills are essential.
-                </p>
-
-                <div class="resource-grid">
-
-                    <article class="resource-card reveal" data-category="digital">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/33920052/pexels-photo-33920052.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Students engaged in hands-on electronics learning" width="400" height="175"
-                                loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">Digital Marketing</span>
-                            <h3>Digital Marketing Basics</h3>
-                            <p>Master SEO, social media marketing, email campaigns, and content creation to grow
-                                businesses online in Ghana.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://learndigital.withgoogle.com/digitalgarage" target="_blank"
-                                    rel="noopener noreferrer" class="btn btn-outline-dark"
-                                    style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal" data-category="digital">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/33920051/pexels-photo-33920051.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Student and teacher engaged in practical learning" width="400" height="175"
-                                loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">Data Literacy</span>
-                            <h3>Data Analysis with Excel &amp; Python</h3>
-                            <p>Understand how to collect, analyse, and visualise data to support decision-making in any
-                                industry.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://www.kaggle.com/learn" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-outline-dark" style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal" data-category="digital">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/3766706/pexels-photo-3766706.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Engaging teacher in a vibrant classroom in Ghana" width="400" height="175"
-                                loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">UI/UX Design</span>
-                            <h3>UI/UX Design Fundamentals</h3>
-                            <p>Design beautiful and user-friendly digital products. Learn Figma, design principles, and
-                                user research techniques.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://www.figma.com/resource-library/" target="_blank"
-                                    rel="noopener noreferrer" class="btn btn-outline-dark"
-                                    style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal" data-category="digital">
-                        <div class="resource-card-img">
-                            <img src="https://images.pexels.com/photos/4173357/pexels-photo-4173357.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
-                                alt="Diverse coworkers using laptop in office corridor" width="400" height="175"
-                                loading="lazy">
-                        </div>
-                        <div class="resource-card-body">
-                            <span class="resource-tag">AI & Machine Learning</span>
-                            <h3>Introduction to AI &amp; Machine Learning</h3>
-                            <p>Understand the AI revolution. Learn how machine learning models work and how to apply
-                                them to real-world problems.</p>
-                            <div class="resource-card-footer">
-                                <span class="free-badge">✓ Free</span>
-                                <a href="https://www.fast.ai" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-outline-dark" style="padding:0.4em 1em; font-size:0.82rem;">
-                                    View Resource
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================== FREE PLATFORMS ===================== -->
-        <section class="platforms-section" id="platforms" aria-labelledby="platforms-heading">
+        <!-- Resource Filters -->
+        <section class="section">
             <div class="container">
-                <span class="section-tag">100% Free</span>
-                <h2 id="platforms-heading" class="section-heading">Top Free Learning Platforms</h2>
-                <div class="divider"></div>
-                <p class="section-sub">
-                    These world-class platforms offer high-quality tech education completely free of charge. Start
-                    learning today.
-                </p>
+                <div class="resource-filters">
+                    <button class="filter-btn active" data-filter="all">All Resources</button>
+                    <button class="filter-btn" data-filter="courses">Courses</button>
+                    <button class="filter-btn" data-filter="tutorials">Tutorials</button>
+                    <button class="filter-btn" data-filter="tools">Tools</button>
+                    <button class="filter-btn" data-filter="books">Books</button>
+                </div>
 
-                <div class="platform-list">
-
-                    <div class="platform-item reveal">
-                        <div class="platform-icon-wrap">01</div>
-                        <div class="platform-info">
-                            <h4>freeCodeCamp</h4>
-                            <p>Thousands of hours of free coding curriculum covering web dev, Python, data science, and
-                                more with certifications.</p>
-                            <a href="https://www.freecodecamp.org" target="_blank" rel="noopener noreferrer"
-                                class="skill-card-link" style="font-size:0.82rem;">
-                                Visit freecodecamp.org &#8594;
-                            </a>
+                <div class="resources-grid">
+                    <!-- Web Development Resources -->
+                    <article class="resource-card" data-category="courses">
+                        <div class="resource-image">
+                            <img src="images/freecode.webp" alt="freeCodeCamp platform screenshot showing coding challenges" width="400" height="250">
                         </div>
-                    </div>
-
-                    <div class="platform-item reveal">
-                        <div class="platform-icon-wrap">02</div>
-                        <div class="platform-info">
-                            <h4>Khan Academy</h4>
-                            <p>Free computing, programming, and data courses built for learners of all ages and
-                                backgrounds.</p>
-                            <a href="https://www.khanacademy.org/computing" target="_blank" rel="noopener noreferrer"
-                                class="skill-card-link" style="font-size:0.82rem;">
-                                Visit khanacademy.org &#8594;
-                            </a>
+                        <div class="resource-content">
+                            <span class="resource-badge">Free Course</span>
+                            <h3 class="resource-title">freeCodeCamp</h3>
+                            <p class="resource-description">Learn to code for free with interactive lessons. Complete projects to earn certifications in Responsive Web Design, JavaScript, Front End Libraries, Data Visualization, and more.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Web Development</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Certification</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Duration: Self-paced</span>
+                                <span class="meta-item">Level: Beginner to Advanced</span>
+                            </div>
+                            <a href="https://www.freecodecamp.org" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="platform-item reveal">
-                        <div class="platform-icon-wrap">03</div>
-                        <div class="platform-info">
-                            <h4>Kaggle Learn</h4>
-                            <p>Micro-courses in Python, ML, data visualisation, and AI. Earn certificates to show
-                                employers.</p>
-                            <a href="https://www.kaggle.com/learn" target="_blank" rel="noopener noreferrer"
-                                class="skill-card-link" style="font-size:0.82rem;">
-                                Visit kaggle.com/learn &#8594;
-                            </a>
+                    <article class="resource-card" data-category="courses">
+                        <div class="resource-image">
+                            <img src="images/compscience.webp" alt="Harvard CS50 course interface" width="400" height="250">
                         </div>
-                    </div>
-
-                    <div class="platform-item reveal">
-                        <div class="platform-icon-wrap">04</div>
-                        <div class="platform-info">
-                            <h4>TryHackMe</h4>
-                            <p>Gamified cybersecurity learning platform. Hack real virtual machines and learn through
-                                doing.</p>
-                            <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer"
-                                class="skill-card-link" style="font-size:0.82rem;">
-                                Visit tryhackme.com &#8594;
-                            </a>
+                        <div class="resource-content">
+                            <span class="resource-badge">Free Course</span>
+                            <h3 class="resource-title">CS50: Introduction to Computer Science</h3>
+                            <p class="resource-description">Harvard University's renowned introduction to computer science and programming. Learn to think algorithmically and solve problems efficiently with C, Python, SQL, and JavaScript.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Computer Science</span>
+                                <span class="tag">Programming</span>
+                                <span class="tag">University</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Duration: 12 weeks</span>
+                                <span class="meta-item">Level: Beginner</span>
+                            </div>
+                            <a href="https://cs50.harvard.edu" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="platform-item reveal">
-                        <div class="platform-icon-wrap">05</div>
-                        <div class="platform-info">
-                            <h4>The Odin Project</h4>
-                            <p>A comprehensive, project-based web development curriculum — completely free and open
-                                source.</p>
-                            <a href="https://www.theodinproject.com" target="_blank" rel="noopener noreferrer"
-                                class="skill-card-link" style="font-size:0.82rem;">
-                                Visit theodinproject.com &#8594;
-                            </a>
+                    <article class="resource-card" data-category="tutorials">
+                        <div class="resource-image">
+                            <img src="images/mdn.webp" alt="MDN Web Docs documentation homepage" width="400" height="250">
                         </div>
-                    </div>
-
-                    <div class="platform-item reveal">
-                        <div class="platform-icon-wrap">06</div>
-                        <div class="platform-info">
-                            <h4>MIT OpenCourseWare</h4>
-                            <p>Access full university-level computer science course materials from MIT, absolutely free.
-                            </p>
-                            <a href="https://ocw.mit.edu/topics/computer-science/" target="_blank"
-                                rel="noopener noreferrer" class="skill-card-link" style="font-size:0.82rem;">
-                                Visit ocw.mit.edu &#8594;
-                            </a>
+                        <div class="resource-content">
+                            <span class="resource-badge">Documentation</span>
+                            <h3 class="resource-title">MDN Web Docs</h3>
+                            <p class="resource-description">The most comprehensive and accurate web development documentation. Learn HTML, CSS, JavaScript, and web APIs with detailed guides, references, and interactive examples.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Web Development</span>
+                                <span class="tag">Documentation</span>
+                                <span class="tag">Reference</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Type: Reference & Tutorials</span>
+                                <span class="meta-item">Level: All Levels</span>
+                            </div>
+                            <a href="https://developer.mozilla.org" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="platform-item reveal">
-                        <div class="platform-icon-wrap">07</div>
-                        <div class="platform-info">
-                            <h4>Google AI Education</h4>
-                            <p>Free AI and machine learning resources from Google, including TensorFlow tutorials and ML
-                                crash course.</p>
-                            <a href="https://ai.google/education/" target="_blank" rel="noopener noreferrer"
-                                class="skill-card-link" style="font-size:0.82rem;">
-                                Visit ai.google/education &#8594;
-                            </a>
+                    <article class="resource-card" data-category="tools">
+                        <div class="resource-image">
+                            <img src="images/github.webp" alt="GitHub platform showing code repositories" width="400" height="250">
                         </div>
-                    </div>
-
-                    <div class="platform-item reveal">
-                        <div class="platform-icon-wrap">08</div>
-                        <div class="platform-info">
-                            <h4>MDN Web Docs</h4>
-                            <p>Mozilla's definitive reference for HTML, CSS, and JavaScript. The go-to resource for
-                                every web developer.</p>
-                            <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank"
-                                rel="noopener noreferrer" class="skill-card-link" style="font-size:0.82rem;">
-                                Visit developer.mozilla.org &#8594;
-                            </a>
+                        <div class="resource-content">
+                            <span class="resource-badge">Platform</span>
+                            <h3 class="resource-title">GitHub</h3>
+                            <p class="resource-description">Essential version control and collaboration platform for developers. Host your code, collaborate with others, build your portfolio, and contribute to open source projects.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Version Control</span>
+                                <span class="tag">Collaboration</span>
+                                <span class="tag">Portfolio</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Type: Development Tool</span>
+                                <span class="meta-item">Cost: Free</span>
+                            </div>
+                            <a href="https://github.com" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="platform-item reveal">
-                        <div class="platform-icon-wrap">09</div>
-                        <div class="platform-info">
-                            <h4>CS50 by Harvard</h4>
-                            <p>Harvard's legendary Introduction to Computer Science — one of the best free courses on
-                                the planet.</p>
-                            <a href="https://cs50.harvard.edu/x/" target="_blank" rel="noopener noreferrer"
-                                class="skill-card-link" style="font-size:0.82rem;">
-                                Visit cs50.harvard.edu &#8594;
-                            </a>
+                    <article class="resource-card" data-category="courses">
+                        <div class="resource-image">
+                            <img src="images/python.webp" alt="Python programming tutorial interface" width="400" height="250">
                         </div>
-                    </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Free Course</span>
+                            <h3 class="resource-title">Python for Everybody</h3>
+                            <p class="resource-description">Learn Python programming from basics to advanced topics. Cover data structures, database integration, web scraping, and data visualization with hands-on projects.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Programming</span>
+                                <span class="tag">Data Science</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Duration: Self-paced</span>
+                                <span class="meta-item">Level: Beginner to Intermediate</span>
+                            </div>
+                            <a href="https://www.py4e.com" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
 
+                    <article class="resource-card" data-category="books">
+                        <div class="resource-image">
+                            <img src="images/javascript.webp" alt="Eloquent JavaScript book cover" width="400" height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Free Book</span>
+                            <h3 class="resource-title">Eloquent JavaScript</h3>
+                            <p class="resource-description">A modern introduction to programming with JavaScript. Covers fundamentals, data structures, functions, objects, modules, asynchronous programming, and practical projects.</p>
+                            <div class="resource-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Book</span>
+                                <span class="tag">Programming</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Format: Online & PDF</span>
+                                <span class="meta-item">Level: Beginner to Intermediate</span>
+                            </div>
+                            <a href="https://eloquentjavascript.net" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+
+                    <!-- Additional Resources -->
+                    <article class="resource-card" data-category="courses">
+                        <div class="resource-image">
+                            <img src="images/odin.webp" alt="The Odin Project interface" width="400" height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Free Course</span>
+                            <h3 class="resource-title">The Odin Project</h3>
+                            <p class="resource-description">Complete full-stack JavaScript and Ruby on Rails curriculum. Build real projects, learn best practices, and join a supportive community of learners.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Full Stack</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Ruby</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Duration: Self-paced</span>
+                                <span class="meta-item">Level: Beginner to Advanced</span>
+                            </div>
+                            <a href="https://www.theodinproject.com" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-category="tutorials">
+                        <div class="resource-image">
+                            <img src="images/w3sch.webp" alt="W3Schools tutorial interface" width="400" height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Tutorial</span>
+                            <h3 class="resource-title">W3Schools</h3>
+                            <p class="resource-description">Interactive web development tutorials with try-it-yourself examples. Learn HTML, CSS, JavaScript, SQL, Python, and more with hands-on practice.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Web Development</span>
+                                <span class="tag">Interactive</span>
+                                <span class="tag">Tutorials</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Type: Interactive Tutorials</span>
+                                <span class="meta-item">Level: All Levels</span>
+                            </div>
+                            <a href="https://www.w3schools.com" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-category="tools">
+                        <div class="resource-image">
+                            <img src="images/vscode.webp" alt="Visual Studio Code editor" width="400" height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Tool</span>
+                            <h3 class="resource-title">Visual Studio Code</h3>
+                            <p class="resource-description">Free, powerful code editor with built-in Git support, debugging, syntax highlighting, and extensions for all major programming languages and frameworks.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Code Editor</span>
+                                <span class="tag">Development</span>
+                                <span class="tag">Free</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Platform: Windows, Mac, Linux</span>
+                                <span class="meta-item">Cost: Free</span>
+                            </div>
+                            <a href="https://code.visualstudio.com" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-category="courses">
+                        <div class="resource-image">
+                            <img src="images/codeacademy.webp" alt="Codecademy learning platform" width="400" height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Platform</span>
+                            <h3 class="resource-title">Codecademy</h3>
+                            <p class="resource-description">Interactive coding lessons in Python, JavaScript, Java, SQL, and more. Learn by doing with hands-on exercises and real-world projects.</p>
+                            <div class="resource-tags">
+                                <span class="tag">Interactive</span>
+                                <span class="tag">Programming</span>
+                                <span class="tag">Multi-language</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Duration: Self-paced</span>
+                                <span class="meta-item">Cost: Free & Paid</span>
+                            </div>
+                            <a href="https://www.codecademy.com" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-category="books">
+                        <div class="resource-image">
+                            <img src="images/js.webp" alt="You Don't Know JS book series" width="400" height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Free Book</span>
+                            <h3 class="resource-title">You Don't Know JS</h3>
+                            <p class="resource-description">Deep dive into JavaScript core mechanisms. Six-book series covering scopes, closures, this, prototypes, async programming, and ES6+ features in detail.</p>
+                            <div class="resource-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Advanced</span>
+                                <span class="tag">Book Series</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Format: GitHub & Print</span>
+                                <span class="meta-item">Level: Intermediate to Advanced</span>
+                            </div>
+                            <a href="https://github.com/getify/You-Dont-Know-JS" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-category="tutorials">
+                        <div class="resource-image">
+                            <img src="images/css.webp" alt="CSS Tricks website" width="400" height="250">
+                        </div>
+                        <div class="resource-content">
+                            <span class="resource-badge">Tutorial</span>
+                            <h3 class="resource-title">CSS-Tricks</h3>
+                            <p class="resource-description">Comprehensive CSS tutorials, tips, and tricks. Learn modern CSS techniques, Flexbox, Grid, animations, and responsive design best practices.</p>
+                            <div class="resource-tags">
+                                <span class="tag">CSS</span>
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Tutorials</span>
+                            </div>
+                            <div class="resource-meta">
+                                <span class="meta-item">Type: Articles & Guides</span>
+                                <span class="meta-item">Level: All Levels</span>
+                            </div>
+                            <a href="https://css-tricks.com" class="resource-link" target="_blank" rel="noopener noreferrer">Access Resource</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- ===================== CTA ===================== -->
-        <section class="cta-section" aria-labelledby="res-cta-heading">
+        <!-- CTA Section -->
+        <section class="section cta">
             <div class="container">
-                <div class="cta-inner reveal">
-                    <span class="section-tag" style="background:rgba(26,188,156,0.25); color:#7efde5;">
-                        Ready to Learn?
-                    </span>
-                    <h2 id="res-cta-heading">Take the Next Step in Your Tech Career</h2>
-                    <p>
-                        Explore career paths, internship opportunities, and professional
-                        development tips tailored for Ghana's growing technology industry.
-                    </p>
+                <div class="cta-content">
+                    <h2 class="cta-title">Can't Find What You're Looking For?</h2>
+                    <p class="cta-description">Contact us and we'll help you find the perfect learning resource for your tech journey.</p>
                     <div class="cta-actions">
-                        <a href="careers.html" class="btn btn-primary">
-                            Explore Career Paths
-                        </a>
-                        <a href="careers.html#inquiry" class="btn btn-outline">
-                            Talk to Us
-                        </a>
+                        <a href="about.html#contact" class="btn btn-primary btn-large">Contact Us</a>
+                        <a href="index.html" class="btn btn-secondary btn-large">Back to Home</a>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="site-footer" role="contentinfo">
+    <!-- Footer -->
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-grid">
-
-                <!-- Brand -->
-                <div class="footer-brand">
-                    <a href="index.html" class="nav-logo">
-                        <span class="logo-icon" aria-hidden="true">
-                            <img src="images/logo.webp" alt="Tech Skills Hub Ghana Logo" width="50" height="50">
-                        </span>
-
-                    </a>
-                    <p>
-                        Empowering students and young professionals across Ghana with the
-                        digital skills and career guidance needed to succeed in the global
-                        technology industry.
-                    </p>
-                    <div class="footer-social" aria-label="Social media links">
-                        <a href="#" class="social-btn" aria-label="Follow us on Twitter">&#120143;</a>
-                        <a href="#" class="social-btn" aria-label="Follow us on LinkedIn">in</a>
-                        <a href="#" class="social-btn" aria-label="Follow us on Facebook">f</a>
-                        <a href="#" class="social-btn" aria-label="Follow us on Instagram">&#9728;</a>
-                        <a href="#" class="social-btn" aria-label="Subscribe on YouTube">&#9654;</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Tech Skills Hub Ghana</h3>
+                    <p class="footer-description">Empowering the next generation of technology professionals in Ghana through quality education, resources, and opportunities.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" class="social-link" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" class="social-link" aria-label="Follow us on Twitter" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com" class="social-link" aria-label="Follow us on LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://github.com" class="social-link" aria-label="Follow us on GitHub" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="resources.html">Learning Resources</a></li>
-                        <li><a href="careers.html">Career Opportunities</a></li>
-                        <li><a href="careers.html#inquiry">Contact Us</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#contact">Contact</a></li>
                     </ul>
                 </div>
 
-                <!-- Skill Areas -->
-                <div class="footer-col">
-                    <h4>Skill Areas</h4>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Learning Paths</h4>
                     <ul class="footer-links">
-                        <li><a href="resources.html#web-dev">Web Development</a></li>
-                        <li><a href="resources.html#programming">Programming</a></li>
-                        <li><a href="resources.html#cybersecurity">Cybersecurity</a></li>
-                        <li><a href="resources.html#digital-skills">Digital Skills</a></li>
-                        <li><a href="resources.html">Free Platforms</a></li>
+                        <li><a href="index.html#learning-paths">Web Development</a></li>
+                        <li><a href="index.html#learning-paths">Programming</a></li>
+                        <li><a href="index.html#learning-paths">Cybersecurity</a></li>
+                        <li><a href="index.html#learning-paths">Digital Skills</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <span class="contact-icon" aria-hidden="true"></span>
-                            <span>Accra Digital Centre, Airport City, Accra, Ghana</span>
-                        </li>
-                        <li>
-                            <span class="contact-icon" aria-hidden="true"></span>
-                            <span>info@techskillshubghana.org</span>
-                        </li>
-                        <li>
-                            <span class="contact-icon" aria-hidden="true"></span>
-                            <span>+233 (0) 50 504 1132</span>
-                        </li>
-                        <li>
-                            <span class="contact-icon" aria-hidden="true"></span>
-                            <span>Mon – Fri, 8:00 AM – 6:00 PM GMT</span>
-                        </li>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="resources.html">Free Courses</a></li>
+                        <li><a href="resources.html">Tutorials</a></li>
+                        <li><a href="resources.html">Tools</a></li>
+                        <li><a href="resources.html">Books</a></li>
                     </ul>
                 </div>
-
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Tech Skills Hub Ghana. All rights reserved.</p>
-                <p>Built By Godfred Osei &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of
-                        Use</a></p>
+                <p>&copy; <span id="currentYear"></span> Tech Skills Hub Ghana. All rights reserved. Empowering Ghana's tech future.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top -->
-    <button class="back-to-top" aria-label="Back to top">&#8679;</button>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
 
-    
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
 </body>
-
 </html>
